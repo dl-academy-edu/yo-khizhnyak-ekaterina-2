@@ -22,19 +22,134 @@
     <!-- endbuild -->
   </head>
   <body>
-    <div class="wrapper">
-      <main class="content">
-        <div class="coming-soon">
-          <h1 class="coming-soon__title">
-            <span>A</span>
-            <span>T</span>
-            <span>X</span>
-          </h1>
+    @@include('blocks/header.html')
+    <main>
+      <section class="container banner">
+        <div class="switch">
+          <span class="switch__number">01</span>
+            <ul class="switch__list">
+              <li class="switch__list-item undotted"><button class="switch__list-btn switch__active" type="button"></button></li>
+              <li class="switch__list-item undotted"><button class="switch__list-btn" type="button"></button></li>
+              <li class="switch__list-item undotted"><button class="switch__list-btn" type="button"></button></li>
+              <li class="switch__list-item undotted"><button class="switch__list-btn" type="button"></button></li>
+            </ul>
         </div>
-      </main>
-      @@include('blocks/footer.html')
+        <div class="caption">
+          <h1 class="caption__title">THE OOH NOO COLLECTION</h1>
+          <h2 class="caption__subtitle">Designed in Slovenia</h2>
+          <button class="caption__info button btn_js" type="button" aria-label="Open modal window">EXPLORE NOW</button>
+        </div>    
+        <p class="banner__text">FREE (CONTINENTAL) USA SHIPPING ON ALL ORDERS OF $100 USD OR MORE!</p>
+        <img class="banner__img" src="./img/monster.png" alt="OOH NOO" width="635" height="461">
+      </section>
+      <section class="products container">
+        <h2 class="products__title title">CATEGORY PRODUCTS</h2>
+          <div class="products__categories">
+            <ul class="products__list">
+              @@include('blocks/product-card.html',{
+                "name": "APPAREL KIDS",
+                "img": "products__list-item__one",
+                "link": "products__link__apparel",
+                "href": "#"
+              })
+              @@include('blocks/product-card.html',{
+                "name": "HOLIDAY SHOP",
+                "img": "products__list-item__two",
+                "link": "products__link__holiday",
+                "href": "#"
+              })
+              @@include('blocks/product-card.html',{
+                "name": "TOYS",
+                "img": "products__list-item__three",
+                "link": "products__link__toys",
+                "href": "./toys.html"
+              })
+              @@include('blocks/product-card.html',{
+                "name": "ACCESSORIES",
+                "img": "products__list-item__four",
+                "link": "products__link__accessories",
+                "href": "#"
+              })
+            </ul>             
+          </div>          
+          <div class="modern">
+            <button class="butt butt-left" type="button"></button>
+            <button class="butt butt-right" type="button"></button>
+            <p class="text__decorative modern-text">Modern finds for the modern home. Curated goods by unique designers around the world from fashion to furniture for kids and adults.</p>
+          </div>
+      </section>
+      <section class="business container">
+        <img src="./img/womanInDress.jpg" alt="woman" width="480" height="559">
+        <div class="delivery">
+          <h2 class="title business__title">DELIVERY</h2>
+          <ul>
+            <li class="delivery__list undotted item-active"><a class="delivery__link link-active" href="#">Delivery</a></li>
+            <li class="delivery__list undotted"><a class="delivery__link delivery-link-guarantee" href="#">Guarantee</a></li>
+            <li class="delivery__list undotted"><a class="delivery__link delivery-link-credit" href="#">Credit</a></li>
+          </ul>
+          <p class="text__decorative delivery__work">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
+          <p class="text__decorative delivery__thank">What started as an outlet to deal  with the traumatic loss of my husband, dlk has now become a truly happy place for me and i have you and all of the beautiful designers that we work with to thank!</p>
+          <button class="caption__info delivery-btn" type="button">LEARN MORE</button>
+        </div>        
+      </section>
+      <section class="social container">
+        <h2 class="title-hidden">socialnetwork</h2>
+        <div class="socialnetwork">                    
+          <ul class="socialnetwork__list">
+            <li class="socialnetwork__link-item"><a class="socialnetwork__link" href="https://mail.ru/"><img src="./img/mail.ru.png" alt="mail" width="193" height="60"></a></li>
+            <li class="socialnetwork__link-item"><a class="socialnetwork__link" href="https://apple.com"><img src="./img/apple.png" alt="apple" width="179" height="61"></a></li>
+            <li class="socialnetwork__link-item"><a class="socialnetwork__link" href="https://eltexcm.ru"><img src="./img/eltex.png" alt="eltex" width="216" height="46"></a></li>
+            <li class="socialnetwork__link-item"><a class="socialnetwork__link" href="https://owox.com"><img src="./img/owox.png" alt="owox" width="211" height="40"></a></li>       
+          </ul>        
+        </div>
+      </section>
+      <section class="about-us container">
+        <div class="design">
+          <h2 class="title design__title">DESIGN LIFE KIDS</h2>
+          <p class="text__decorative design__aboutus">About Us</p>
+          <p class="text__decorative design__text">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.  </p>
+          <button class="caption__info design__link">BUY NOW</button> 
+        </div>
+        <div class="contacts">
+          <h2 class="title contacts__title">CONTACTS</h2>
+          <p class="text__decorative contacts__text">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
+          <iframe class="contacs__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.5371506249517!2d49.288149915401306!3d53.51246308001415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x416879a82611632d%3A0xb18d94ffcf91e387!2zREwgQWNhZGVteSDigJQg0LrRg9GA0YHRiyDQv9GA0L7Qs9GA0LDQvNC80LjRgNC-0LLQsNC90LjRjw!5e0!3m2!1sru!2sru!4v1669022065024!5m2!1sru!2sru" width="483" height="196" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+    </main>
+    @@include('blocks/footer.html')
+    <div class="popup">
+      <div class="overlay"></div>
+        <div class="modal__wrap">
+          <form class="contact__form" method="post" action="#">
+            <div class="label__wrapper">
+              <label class="contact__label" for="name">Name</label>
+              <input class="contact__input-name" type="text" placeholder="" name="name" id="name">
+            </div>
+            <div class="column__two-input">
+              <div class="label__wrapper">
+                <label class="contact__label" for="phone">Phone</label>
+                <input class="contact__input" type="tel" name="phone" id="phone">
+              </div>
+              <div class="label__wrapper">
+                <label class="contact__label" for="email">Email</label>
+                <input class="contact__input" type="email" name="email" id="email">
+              </div> 
+            </div>
+            <div>
+              <label class="contact__label" for="message">Message</label>
+              <textarea class="contact__area" name="message" id="message" cols="30" rows="10"></textarea>
+            </div>
+            <div class="checkbox">
+              <input class="checkbox__input" type="checkbox" name="checkbox" id="checkbox">
+              <label for="checkbox" class="checkbox__text">By clicking on the button, you consent to the processing of your personal data</label>
+            </div>
+            <button class="caption__info submit" type="submit" disabled>SUBMIT</button>
+          </form>
+          <button class="close" type="button"></button>
+        </div>
     </div>
-
     <script src="js/app.js" defer></script>
+    <script src="js/popup.js"></script>        
   </body>
 </html>
