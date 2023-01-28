@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>DL Academy</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <script>
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+    </script>
+
+    <!-- Favicon -->
+
+    <!-- build:css -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <!-- endbuild -->
+  </head>
+<body>
+  @@include('blocks/header.html')
+    <main>
+      <section class="contact__box container">
+        <h2 class="title-hidden">Contact</h2>
+        <section class="contact">
+          <h2 class="title title__contact">CONTACT US</h2>
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__list-item undotted"><a class="breadcrumbs__link" href="#">Home</a></li>
+              <li class="breadcrumbs__list-item undotted"><a class="breadcrumbs__link" href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <form class="contact__form" method="post" action="#">
+            <div class="label__wrapper">
+              <label class="contact__label" for="name">Name</label>
+              <input class="contact__input-name input-change" type="text" placeholder="Ivan Ivanov" name="name" id="name">
+            </div>
+            <div class="column__two-input">
+              <div class="label__wrapper">
+                <label class="contact__label" for="phone">Phone</label>
+                <input class="contact__input input-change" type="tel" name="phone" id="phone">
+              </div>
+              <div class="label__wrapper">
+                <label class="contact__label" for="email">Email</label>
+                <input class="contact__input input-change" type="email" name="email" id="email">
+              </div> 
+            </div>
+            <div>
+              <label class="contact__label" for="message">Message</label>
+              <textarea class="contact__area input-change" name="message" id="message" cols="30" rows="10"></textarea>
+            </div>
+            <div class="checkbox">
+              <input class="checkbox__input" type="checkbox" name="checkbox" id="checkbox" checked>
+              <label class="text__decorative checkbox__text" for="checkbox">By clicking on the button, you consent to the processing of your personal data</label>
+            </div>
+            <button class="caption__info" type="submit">SUBMIT</button>
+          </form>
+        </section>
+        <section class="contact__info">
+          <h2 class="title-hidden">Info</h2>
+          <p class="text__decorative contact-text">Our support team are on-hand to assist with any issues you are experiencing.</p>
+          <p class="text__decorative contact-text">Please use the form to contact us with your needs. Send us a message and we'll respond as soon as possible.</p>
+          <p class="contact__info-text">AN EXPERT IS WAITING TO HELP YOU!</p>
+        </section>
+      </section>
+    </main>
+    @@include('blocks/footer.html')    
+  </body>
+</html>
