@@ -1,19 +1,21 @@
+<!-- нужно ли в footer что то выносить в iclude? -->
+
 <footer class="footer">
   <div class="footer__box container">
     <div class="footer__navigation">
-      <h2 class="link__name">Navigation</h2>
-      <ul class="navigation__list">
-        <li class="navigation__list-item undotted"><a class="navigation__link footer__link" href="#">About Us</a></li>
-        <li class="navigation__list-item undotted"><a class="navigation__link footer__link" href="./pages/blog.html">Blog</a></li>
-        <li class="navigation__list-item undotted"><a class="navigation__link footer__link" href="#">Design Services</a></li>
-        <li class="navigation__list-item undotted"><a class="navigation__link footer__link" href="#">Featured On</a></li>
-        <li class="navigation__list-item undotted"><a class="navigation__link footer__link" href="#">2018 Holiday Catalog</a></li>
-        <li class="navigation__list-item undotted"><a class="navigation__link footer__link" href="#">Shop By Designer</a></li>
+      <h2 class="footer__navigation__name">Navigation</h2>
+      <ul class="footer__navigation__list">
+        <li class="footer__navigation__list-item undotted"><a class="footer__link" href="#">About Us</a></li>
+        <li class="footer__navigation__list-item undotted"><a class="footer__link" href="./pages/blog.html">Blog</a></li>
+        <li class="footer__navigation__list-item undotted"><a class="footer__link" href="#">Design Services</a></li>
+        <li class="footer__navigation__list-item undotted"><a class="footer__link" href="#">Featured On</a></li>
+        <li class="footer__navigation__list-item undotted"><a class="footer__link" href="#">2018 Holiday Catalog</a></li>
+        <li class="footer__navigation__list-item undotted"><a class="footer__link" href="#">Shop By Designer</a></li>
       </ul>
     </div>
     <div class="footer__information">
-      <h2 class="link__name information__name">Customer Information</h2>
-      <ul class="information__list">
+      <h2 class="footer__information__name">Customer Information</h2>
+      <ul class="footer__information__list">
         <li class="undotted"><a class="footer__link" href="./pages/contact.html">Contact Us</a></li>
         <li class="undotted"><a class="footer__link" href="#">Sale Exclusions</a></li>
         <li class="undotted"><a class="footer__link" href="#">Shipping & Returns</a></li>
@@ -23,23 +25,27 @@
       </ul>
     </div>
     <div class="footer__connect">
-      <h2 class="link__name connect__name">Connect</h2>
-      <div class="connect__wrapper">
-        <input class="connect__email" type="text" name="text" placeholder="Email">
-        <button class="caption__info" type="button">JOIN</button>
+      <h2 class="footer__connect__name">Connect</h2>
+      <div class="footer__connect__wrapper">
+        <input class="footer__connect__email" type="text" name="text" placeholder="Email">
+        @@include('blocks/button.html',
+          {"class": "",
+          "type": "button",
+          "name": "JOIN"
+          })
       </div>
-      <div class="media-icons">
-        <ul class="media-icons__list">
-          <li class="undotted"><a class="media-icons__link" href="https://www.facebook.com"><img class="media-icons__img" src="./img/icon/facebook.svg" alt="facebook"></a></li>
-          <li class="undotted"><a class="media-icons__link" href="https://www.twitterinc.com"><img class="media-icons__img" src="./img/icon/twitter.svg" alt="twitter"></a></li>
-          <li class="undotted"><a class="media-icons__link" href="https://ru.pinterest.com"><img class="media-icons__img" src="./img/icon/pinterest.svg" alt="pinterest"></a></li>
-          <li class="undotted"><a class="media-icons__link" href="https://www.instagram.com"><img class="media-icons__img" src="./img/icon/instagram.svg" alt="instagram"></a></li>
+      <div class="footer__media-icons">
+        <ul class="footer__media-icons__list">
+          <li class="undotted"><a class="footer__media-icons__link" href="https://www.facebook.com"><img class="media-icons__img" src="./img/icon/facebook.svg" alt="facebook"></a></li>
+          <li class="undotted"><a class="footer__media-icons__link" href="https://www.twitterinc.com"><img class="media-icons__img" src="./img/icon/twitter.svg" alt="twitter"></a></li>
+          <li class="undotted"><a class="footer__media-icons__link" href="https://ru.pinterest.com"><img class="media-icons__img" src="./img/icon/pinterest.svg" alt="pinterest"></a></li>
+          <li class="undotted"><a class="footer__media-icons__link" href="https://www.instagram.com"><img class="media-icons__img" src="./img/icon/instagram.svg" alt="instagram"></a></li>
         </ul>   
       </div>
     </div>
-    <div class="free-box">
-      <div class="rating">
-          <div class="rating__group rating__caption rating__title">
+    <div class="footer__rating-box">
+      <div class="footer__rating">
+          <div class="footer__rating__group footer__rating__caption">
             <input class="rating__star" type="radio" name="fail" id="5">
             <label class="label-rating" for="5"></label>
             <input class="rating__star" type="radio" name="satisfactory" id="4">
@@ -53,8 +59,8 @@
             Company Rating
           </div>  
       </div>
-      <p class="rating__caption">Copyright © 2018 Dlk • Design Life Kids</p>
-      <a class="rating__caption rating__caption-web" href="#">Web Design — Direct Line Development</a>
+      <p class="footer__rating__caption">Copyright © 2018 Dlk • Design Life Kids</p>
+      <a class="footer__rating__caption-web" href="#">Web Design — Direct Line Development</a>
     </div>
   </div>
 </footer>

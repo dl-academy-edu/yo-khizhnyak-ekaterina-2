@@ -1,140 +1,48 @@
-/* стилизация main */
-
-.categories__box {
-    margin-top: 60px;
-    margin-bottom: 55px;
-  }
-  
-  .title {
+.category {
+  margin-top: 60px;
+  margin-bottom: 55px;
+  &__title {
+    font-family: 'Montserrat', sant-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: #1E0606; 
     font-size: 40px;
     line-height: 49px;
     text-transform: uppercase;
     margin: 0 auto;
   }
-  
-  .product__list {
+  &__list {
     display: flex;
     align-items: flex-start;
     flex-flow: row wrap;
     column-gap: 20px;
     row-gap: 23px;
+    &--empty {
+  width: 180px;
+}
   }
+}
   
-  .product__list-item {
-    position: relative;
-    display: flex;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 280px;
-    height: 270px;
-  }
-  
-  .products-hidden-1 {
-    min-width: 205px;
-  }
-  
-  .products-hidden-2 {
-    min-width: 180px;
-  }
-  
-  .product__apparel {
-    background-image: url(../img/categoryOne.jpeg);  
-    background-color: #DBE4DB; 
-  }
-  
-  .product__holiday {
-    background-image: url(../img/categoryTwo.png);
-    background-color: #EADDD3;
-  }
-  
-  .product__toys{
-    background-image: url(../img/categoryThree.png);
-    background-color: #F8F2DA;
-  }
-  
-  .product__accessories{
-    background-image: url(../img/categoryFour.png);
-    background-color: #D5D4E1;
-  }
-  
-  .product__sale {
-    background-image: url(../img/categoryFive.jpeg);
-    background-color: #F3D0DB;
-  }
-  
-  .product__adults{
-    background-image: url(../img/categorySix.jpeg);
-    background-color: #E5EAF8;
-  }
-  
-  .product__link {
-    font-family: 'Montserrat';
+.description {
+  padding-left: 200px;
+  padding-right: 300px;
+  margin-bottom: 55px;
+  &__title {
+    font-family: 'Montserrat', sant-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 32px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
-  }
-  
-  .product__link:hover, .product__link:active {
-    text-decoration: underline;
-  }
-  
-  .product__link-apparel {
-    position: absolute;
-    top: 103px;
-    left: 48px;
-    width: 66%;
-  }
-  
-  .product__link-holiday {
-    position: absolute;
-    top: 103px;
-    left: 48px;
-    width: 66%;
-  }
-  
-  .product__link-toys {
-    position: absolute;
-    top: 119px;
-    left: 105px;
-  }
-  
-  .product__link-accessories {
-    position: absolute;
-    top: 119px;
-    left: 45px;
-    width: 66%;
-  }
-  
-  .product__link-sale {
-    position: absolute;
-    top: 119px;
-    left: 105px;
-  }
-  
-  .product__link-adults {
-    position: absolute;
-    top: 103px;
-    left: 44px;
-    width: 66%;
-  }
-  
-  .description {
-    padding-left: 200px;
-    padding-right: 300px;
-    margin-bottom: 55px;
-  }
-  
-  .description__title {
+    color: #1E0606; 
     font-size: 38px;
     line-height: 46px;
     padding-bottom: 10px;
   }
-  
-  .description__text {
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1E0606;
     padding-top: 15px;
   }
+}

@@ -25,135 +25,133 @@
     @@include('blocks/header.html')
     <main>
       <section class="toys container">
-        <h1 class="title toys__title">TOY FOR KIDS</h1>
-        <div class="breadcrumbs">   
-          <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__list-item undotted"><a class="breadcrumbs__link" href="../index.html">Home</a></li>
-            <li class="breadcrumbs__list-item undotted"><a class="breadcrumbs__link" href="../pages/catalog.html">Catalog</a></li>
-            <li class="breadcrumbs__list-item undotted"><a class="breadcrumbs__link" href="../pages/toys.html">Toys</a></li>
-          </ul>
-        </div>
+        <h1 class="toys__title">TOY FOR KIDS</h1>   
+        <ul class="breadcrumbs__list">
+          @@include('blocks/breadcrumbs.html', {
+            "text": "Home",
+            "path": "/"})
+          @@include('blocks/breadcrumbs.html', {
+            "text": "Catalog",
+            "path": "/catalog.html"})
+          @@include('blocks/breadcrumbs.html', {
+            "text": "Toys",
+            "path": "#"})
+        </ul>
       </section>
       <section class="filter">
-        <h2 class="title-hidden">Filter</h2>
+        <!-- что в filter нужно вынести в iclude? каждый div или li из div? -->
+        <h2 class="filter__title">Filter</h2>
         <div class="filter__cost">
-          <p class="filter__name">Cost</p>
-          <input class="cost__input" type="range" min="0" max="500" value="100">
-          <span class="filter-text cost__value">0 500</span>  
+          <p class="filter__cost__name">Cost</p>
+          <input class="filter__cost__input" type="range" min="0" max="500" value="100">
+          <span class="filter__cost__value">0 500</span>  
         </div>
         <div class="filter__color">
-          <p class="filter__name">Color</p>
-          <ul class="filter__color-list">
+          <p class="filter__color__name">Color</p>
+          <ul class="filter__color__list">
             <li>
-              <input class="color__input" type="checkbox" name="color" id="black">
-              <label class="color__label filter-text" for="black">Black</label>
+              <input class="filter__color__input" type="checkbox" name="color" id="black">
+              <label class="filter__color__label" for="black">Black</label>
             </li>
             <li>
-              <input class="color__input" type="checkbox" name="color" id="blue">
-              <label class="color__label filter-text" for="blue">Blue</label>
+              <input class="filter__color__input" type="checkbox" name="color" id="blue">
+              <label class="filter__color__label" for="blue">Blue</label>
             </li>
             <li>
-              <input class="color__input" type="checkbox" name="color" id="green">
-              <label class="color__label filter-text" for="green">Green</label>
+              <input class="filter__color__input" type="checkbox" name="color" id="green">
+              <label class="filter__color__label" for="green">Green</label>
             </li>
             <li>
-              <input class="color__input" type="checkbox" name="color" id="white">
-              <label class="color__label filter-text" for="white">White</label>
+              <input class="filter__color__input" type="checkbox" name="color" id="white">
+              <label class="filter__color__label" for="white">White</label>
             </li>
           </ul>
         </div>
         <div class="filter__delivery">
-          <p class="filter__name delivery-name">Delivery</p>
+          <p class="filter__delivery__name">Delivery</p>
           <ul class="filter__delivery__list">
-            <li class="filter__list-item">
-              <input class="delivery__input" type="radio" name="delivery" id="free" checked>
-              <label class="delivery__choise filter-text" for="free">Free shipping</label>
+            <li>
+              <input class="filter__delivery__input" type="radio" name="delivery" id="free" checked>
+              <label class="filter__delivery__choise" for="free">Free shipping</label>
             </li>
-            <li class="filter-list-item">
-              <input class="delivery__input" type="radio" name="delivery" id="fast">
-              <label class="delivery__choise filter-text" for="fast">Fast shipping</label>
+            <li>
+              <input class="filter__delivery__input" type="radio" name="delivery" id="fast">
+              <label class="filter__delivery__choise" for="fast">Fast shipping</label>
             </li>
           </ul>
         </div>
         <div class="filter__amount">
-          <p class="filter__name">Amount</p>
-          <ul class="filter__amount-list">
+          <p class="filter__amount__name">Amount</p>
+          <ul class="filter__amount__list">
             <li>
-              <input class="amount__input" type="radio" name="amount" id="0-5" value="0-5" checked>
-              <label class="amount__value amount__value-mini filter-text" for="0-5">0-5</label>
+              <input class="filter__amount__input" type="radio" name="amount" id="0-5" value="0-5" checked>
+              <label class="filter__amount__value filter__amount__value-mini" for="0-5">0-5</label>
             </li>
             <li>
-              <input class="amount__input" type="radio" name="amount" id="10-20" value="10-20">
-              <label class="amount__value filter-text" for="10-20">10-20</label>
+              <input class="filter__amount__input" type="radio" name="amount" id="10-20" value="10-20">
+              <label class="filter__amount__value" for="10-20">10-20</label>
             </li>
             <li>
-              <input class="amount__input" type="radio" name="amount" id="20-50" value="20-50">
-              <label class="amount__value filter-text" for="20-50">20-50</label>
+              <input class="filter__amount__input" type="radio" name="amount" id="20-50" value="20-50">
+              <label class="filter__amount__value" for="20-50">20-50</label>
             </li>
           </ul>
         </div>
-        <div class="submit">
-          <button class="caption__info" type="submit">APPLY</button>
+        <div class="filter__submit">
+          @@include('blocks/button.html', {
+            "class": "",
+            "type": "submit",
+            "name": "APPLY"
+          })
         </div>
       </section>
-        <section class="toys__catalog container">
-          <h2 class="title-hidden">Toys</h2>
-          <ul class="toys__catalog-list">
-            <li class="toys__link">
-              <a class="toys__link-item" href="">learn more</a>
-              <img src="../img/sharky.png" alt="sharky" width="380" height="385">
-              <p class="toys-list-name">SHARKY BEAN BAG CHAIR COVER</p>
-              <p class="toys-cost">$60.00 USD</p>
-            </li>
-            <li class="toys__link">
-              <a class="toys__link-item" href="">learn more</a>
-              <img src="../img/frames.png" alt="frames" width="380" height="385">
-              <p class="toys-list-name">BRASS DECO FRAMES</p>
-              <p class="toys-cost">$66.00 USD</p>
-             </li>
-            <li class="toys__link">
-              <a class="toys__link-item" href="">learn more</a>
-              <img src="../img/apron.png" alt="apron" width="380" height="385">
-              <p class="toys-list-name">CIBO FULL APRON</p>
-              <p class="toys-cost">$60.00 USD</p>
-            </li>
-            <li class="toys__link">
-              <a class="toys__link-item" href="">learn more</a>
-              <img src="../img/gumball-machine.png" alt="gumball machine" width="380" height="385">
-              <p class="toys-list-name">GATCHA GATCHA GUMBALL MACHINE</p>
-              <p class="toys-cost">$56.00 USD</p>
-            </li>
-            <li class="toys__link">
-              <a class="toys__link-item" href="">learn more</a>
-              <img src="../img/scented-candle.png" alt="scented candle" width="380" height="385">
-              <p class="toys-list-name">CHRISTMAS ADVENT SCENTED CANDLE</p>
-              <p class="toys-cost">$29.00 USD</p>
-            </li>
-            <li class="toys__link">
-              <a class="toys__link-item" href="">learn more</a>
-              <img src="../img/tea-light.png" alt="tea light" width="380" height="385">
-              <p class="toys-list-name">TANGLE SPINNING TEA LIGHT</p>
-              <p class="toys-cost">$56.00 USD</p>
-            </li>
+        <section class="catalog container">
+          <h2 class="catalog__title">Toys</h2>
+          <ul class="catalog__list">
+            @@include('blocks/toys-list.html', {
+              "link": "#",
+              "img": "/img/sharky.png",
+              "alt": "sharky",
+              "name": "SHARKY BEAN BAG CHAIR COVER",
+              "cost": "$60.00 USD"
+            })
+            @@include('blocks/toys-list.html', {
+              "link": "#",
+              "img": "/img/frames.png",
+              "alt": "frames",
+              "name": "BRASS DECO FRAMES",
+              "cost": "$66.00 USD"
+            })
+            @@include('blocks/toys-list.html', {
+              "link": "#",
+              "img": "/img/apron.png",
+              "alt": "apron",
+              "name": "CIBO FULL APRON",
+              "cost": "$60.00 USD"
+            })
+            @@include('blocks/toys-list.html', {
+              "link": "#",
+              "img": "/img/gumball-machine.png",
+              "alt": "gumball machine",
+              "name": "GATCHA GATCHA GUMBALL MACHINE",
+              "cost": "$56.00 USD"
+            })
+            @@include('blocks/toys-list.html', {
+              "link": "#",
+              "img": "/img/scented-candle.png",
+              "alt": "scented candle",
+              "name": "CHRISTMAS ADVENT SCENTED CANDLE",
+              "cost": "$29.00 USD"
+            })
+            @@include('blocks/toys-list.html', {
+              "link": "#",
+              "img": "/img/tea-light.png",
+              "alt": "tea light",
+              "name": "TANGLE SPINNING TEA LIGHT",
+              "cost": "$56.00 USD"
+            })
           </ul>
-          <div class="pagination">
-            <a href="">
-              <svg width="18" height="30" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16 2L3 15L16 28" stroke="#1E0606" stroke-opacity="0.12" stroke-width="4"/>
-              </svg></a>
-            <div>
-              <ul class="pagination__list">
-                <li><a class="pagination__number undotted number-active" href="#">1</a></li>
-                <li><a class="pagination__number undotted" href="#">2</a></li>
-                <li><a class="pagination__number undotted" href="#">3</a></li>
-                <li><a class="pagination__number undotted" href="#">4</a></li>
-              </ul>                      
-            </div>
-            <a href="">
-              <svg width="18" height="30" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2 2L15 15L2 28" stroke="#1E0606" stroke-opacity="0.12" stroke-width="4"/>
-              </svg></a>
-          </div>
+          @@include('blocks/pagination.html')
         </section>
     </main>
     @@include('blocks/footer.html') 
