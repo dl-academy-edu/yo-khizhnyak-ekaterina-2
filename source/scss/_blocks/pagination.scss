@@ -1,0 +1,40 @@
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__list {
+        display: flex;
+        justify-self: center;
+        align-items: center;
+        gap: 64px;
+    }
+    &__number {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: #1E0606;
+        &:hover {
+            color: #AAAAAA;
+        }
+        &:active {
+            color: #AAAAAA;
+        }
+    }
+    &__number-active {
+        color: #C29974;
+        padding-right: 5px;
+    }
+}
+
+path:hover {
+    stroke: #C29974;
+    stroke-opacity: 1;
+}
+  
+path:active {
+    stroke: #C29974;
+    stroke-opacity: 0.7;
+}

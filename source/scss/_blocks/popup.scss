@@ -1,0 +1,49 @@
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    max-width: 100%;
+    min-height: 30%;
+    z-index: 3;
+}
+  
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(125, 151, 218, 0.8);
+    padding: 7% 30%;
+    max-width: 100%;
+    min-height: 30%;
+}
+  
+.open {
+    display: flex;
+}
+  
+.modal__wrap {
+    display: flex;
+    flex-direction: row;
+    margin-left: 32%;
+    margin: 7% 28%;
+    z-index: 100;
+}
+  
+.close {
+    background-image: url('../img/icon/close.svg');
+    background-color: rgba(125, 151, 218, 0.8);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    margin-top: 0px;
+}

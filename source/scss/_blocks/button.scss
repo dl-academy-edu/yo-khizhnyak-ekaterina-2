@@ -1,0 +1,33 @@
+.caption__info {
+    background-color: #000000;;
+    color: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    max-width: max-content;
+    padding: 9px 22px;
+    border: none;
+}
+  
+.caption__info:hover {
+    background-color: #C29974;
+}
+  
+.caption__info:active {
+    background-color: #CFAF91;
+}
+  
+.caption__info:disabled {
+    background-color: #C7C1C1;
+}
+
+.banner__button {
+    max-width: max-content;
+    border: none;
+  }
+
+.delivery__button {
+    margin-left: 60px;
+}

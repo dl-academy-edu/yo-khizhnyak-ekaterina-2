@@ -20,9 +20,17 @@
       background-image: url(../img/categoryFour.png);
       background-color: #D5D4E1;
     }
-  }
+    &__five {
+      background-image: url(../img/categoryFive.jpeg);
+      background-color: #F3D0DB;
+    }
+    &__six {
+      background-image: url(../img/categorySix.jpeg);
+      background-color: #E5EAF8;
+    }
+}
     
-  .products__link {
+.products__link {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -54,8 +62,21 @@
       top: 120px;
       left: 45px;
     }
-  }
-  
-  .products__link:hover, .products__link:active {
-    text-decoration: underline;
-  }
+    &__sale {
+      position: absolute;
+      top: 119px;
+      left: 105px;
+    }
+    &__adults {
+      position: absolute;
+      top: 103px;
+      left: 44px;
+      width: 66%;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+    &:active {
+      text-decoration: underline;
+    }
+}

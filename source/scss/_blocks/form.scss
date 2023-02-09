@@ -1,0 +1,129 @@
+.form {
+    max-width: 680px;
+    max-height: 542px;
+    background-color: #E5EAF8;
+    padding: 42px 40px;
+    &__label {
+        margin-bottom: 3px;
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: #1E0606;
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+    }
+    &__input-name {
+        width: 100%px;
+        height: 50px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        padding-top: 16px;
+        padding-bottom: 11px;
+        padding-left: 20px;
+        &::placeholder {
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+            color: #1E0606;
+        }
+    }
+    &__two-input {
+        display: flex;
+        max-width: 600px;
+        gap: 20px;
+    }
+    &__input {
+        width: 290px;
+        height: 50px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    &__input-change:hover {
+        border: 1px solid #C29974;
+    }
+    &__input-change:active {
+        border: 1px solid #C29974;
+    }
+    &__input-change:disabled {
+        border: 1px solid #EBEBEB;
+    }
+    &__area {
+        width: 100%;
+        height: 150px;
+        resize: none;
+        border: none;
+        margin-top: 5px;
+    }
+    &__checkbox {
+        display: flex;
+        position: relative;
+        margin-bottom: 19px;
+        margin-top: 20px;
+        &__input {
+            position: absolute;
+            opacity: 0;
+            margin: 0;
+        }
+        &__contact{
+            font-family: 'Open Sans', sans-serif;
+        }
+        &__popup {
+            font-family: 'Roboto', sans-serif;
+        }
+        &__text {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: #1E0606;
+            margin-left: 35px;
+            &::before {
+                position: absolute;
+                content: "";
+                background-image: url('../img/icon/square.svg');
+                background-repeat: no-repeat;
+                top: -4px;
+                left: 35px;
+                background-size: cover;
+                cursor: pointer;
+                width: 19px;
+                height: 19px;
+                margin-left: -35px;
+            }
+            &:active {
+                text-decoration: underline;
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// как правильно оформить записи ниже?
+
+.form__checkbox__input:checked +.form__checkbox__text::before{
+    background-image: url('../img/icon/contact-checked.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x: right;
+    background-position-y: top;
+    width: 19px;
+    height: 19px;
+    background-color: #E5EAF8;
+}
+
+.form__checkbox__input:disabled + .form__checkbox__text::before {
+    content: "";
+    background-image: url("../img/icon/square-disabled.svg");
+}
+
+.form__checkbox__input:disabled + .form__checkbox__text {
+    color: #908484;
+    text-decoration: none;
+}
