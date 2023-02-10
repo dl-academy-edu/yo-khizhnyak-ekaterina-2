@@ -5,32 +5,24 @@
     margin-top: 50px;
     align-items: center;
   }
-  
-  .header__change:hover {
-    opacity: 0.5;
-  }
-  
-  .header__change:active {
-    opacity: 0.2;
-  }
-  
-  .header__nav {
+    
+.header__nav {
     display: flex;
-  }
+}
+
+.header__change:hover {
+    opacity: 0.5;
+}
+  
+.header__change:active {
+    opacity: 0.2;
+}
   
   .header__list {
     display: flex;
   }
-  
-  .header__left {
-    margin-right: auto;
-  }
-  
-  .header__logo {
-    margin-right: 60px;
-  }
-  
-  .header__list-link {
+
+.header__list-link {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -38,7 +30,15 @@
     line-height: 19px;
     color: #1E0606;
     margin-right: 20px;
+}
+  
+  .header__left {
+    margin-right: auto;
   }
+  
+  .header__logo {
+    margin-right: 60px;
+  }  
   
   .header__list-search {
     font-family: 'Open Sans', sans-serif;
