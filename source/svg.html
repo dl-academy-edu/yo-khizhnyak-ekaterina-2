@@ -23,8 +23,74 @@
   </head>
   <body>
     @@include('blocks/header.html')
-    <main>
-
+    <main class="svg container">
+      <h1 class="svg__title">SVG animation</h1>
+      <ul class="breadcrumbs__list">
+        @@include('blocks/breadcrumbs.html', {
+          "text": "Home",
+          "path": "/"})
+        @@include('blocks/breadcrumbs.html', {
+          "text": "SVG",
+          "path": "#"})
+      </ul>
+      <div class="svg__wrap">
+        <section class="svg__picture">
+          <h2 class="svg__subtitle">Picture</h2>
+          <svg class="svg__pict" widht="418" height="361" viewBox="0 0 418 361" stroke="none" fill="transparent">
+            <path d="M 14 0, C7 0 0 7 0 14, v13, h418, v13, L 418 13.5Q418 0 404.5 0, h-390 " fill="#CCD1D9"/>
+            <rect x="0" y="27" width="21" height="324" fill="#545C66" stroke="none"/>
+            <rect x="21" y="27" width="1" height="324" fill="#6C747F" stroke="none"/>
+            <rect x="22" y="27" width="187" height="324" fill="#656D78" stroke="none"/>
+            <path class="svg__rect--left" d="M 46,47, C43 47 40 50.5 40 54, C40 57.5 43 61 46 61, h129, C178 61 181 57.5 181 54, C181 50.5 178 47 175 47, h-129" fill="#5D9CEC"/>
+            <rect class="svg__rect--right" x="53" y="74" width="144" height="14" rx="7" ry="7" fill="#A0D468"/> 
+            <rect class="svg__rect--left" x="66" y="101" width="42" height="14" rx="7" ry="7" fill="#ED5565"/>
+            <path class="svg__rect--right" d="M 128 101, L128 101Q121 101 121 108, L121 108Q121 115 128 115, h81 v-14z" fill="#ED5565"/>
+            <path class="svg__rect--left" d="M 87 128, L87 128Q80 128 80 135, L80 135Q80 142 87 142, h122 v-14z" fill="#FFCE54"/>
+            <rect class="svg__rect--right" x="79" y="154" width="90" height="14" rx="7" ry="7" fill="#CCD1D9"/>
+            <rect class="svg__rect--left" x="79" y="181" width="36" height="14" rx="7" ry="7" fill="#CCD1D9"/>
+            <path class="svg__rect--right" d="M134 181, L134 181Q127 181 127 188, L127 188Q127 195 135 195, h74 v-14z" fill="#CCD1D9"/>
+            <path class="svg__rect--left" d="M87 208 , L87 208Q80 208 80 215, L80 215Q80 222 87 222, h122 v-14z" fill="#CCD1D9"/>
+            <rect class="svg__rect--right" x="80" y="235" width="103" height="14" rx="7" ry="7" fill="#FFCE54"/>
+            <rect class="svg__rect--left" x="67" y="262" width="76" height="14" rx="7" ry="7" fill="#ED5565"/>
+            <rect class="svg__rect--right" x="53" y="289" width="110" height="14" rx="7" ry="7" fill="#A0D468"/>
+            <rect class="svg__rect--left" x="40" y="316" width="56" height="14" rx="7" ry="7" fill="#5D9CEC"/>
+            <rect x="209" y="27" width="209" height="324" fill="#E6E9ED"/>
+            <path class="" d="M209 47, L391 47Q398 47 398 54, L398 162Q398 169 391 169, h-182" fill="#5D9CEC"/>
+            <path d="M226 169, 275.25 114 C276.25 112 278.25 112 279.25 114 L293.5 129.5 L262.5 169" fill="#545C66"/>
+            <path class="" d="M262.5 169 314 103 C323 92 325 92 334 103 L385.5 169" fill="#656D78"/>
+            <rect x="229" y="188" width="169" height="88" rx="5" ry="5" fill="#5D9CEC"/>
+            <circle class="svg__sun" cx="263" cy="215.5" r="11" fill="#FFCE54"/>
+            <rect class="svg__rect--right" x="228" y="289" width="170" height="14" rx="7" ry="7" fill="#CCD1D9"/>
+            <rect class="svg__rect--left" x="228" y="316" width="96" height="14" rx="7" ry="7" fill="#CCD1D9"/>
+            <path d="M273.5 276 295.5 244.5 C305 233 307 233 316.5 244.5 L319.5 250 L300 276" fill="#545C66"/>
+            <path d="M300 276 333 231 C341 219 345 219 353 231 L386 276" fill="#656D78"/>
+          </svg>
+        </section>
+        <section class="svg__stars">
+          <h2 class="svg__subtitle">Stars</h2>
+          <svg class="svg__stars-one" widht="28" height="28" viewBox="0 0 28 28" stroke="none" fill="transparent">          
+            <polygon points="4 28, 14 0, 24 28, 0 10, 28 10" fill="#FFCE54"/>
+          </svg>
+          <svg class="svg__stars-two" widht="28" height="28" viewBox="0 0 28 28" stroke="none" fill="transparent">          
+            <polygon points="4 28, 14 0, 24 28, 0 10, 28 10" fill="#FFCE54"/>
+          </svg>
+          <svg class="svg__stars-three" widht="28" height="28" viewBox="0 0 28 28" stroke="none" fill="transparent">          
+            <polygon points="4 28, 14 0, 24 28, 0 10, 28 10" fill="#FFCE54"/>
+          </svg>
+          <svg class="svg__stars-four" widht="28" height="28" viewBox="0 0 28 28" stroke="none" fill="transparent">          
+            <polygon points="4 28, 14 0, 24 28, 0 10, 28 10" fill="#FFCE54"/>
+          </svg>
+          <svg class="svg__stars-five" widht="28" height="28" viewBox="0 0 28 28" stroke="none" fill="transparent">          
+            <polygon points="4 28, 14 0, 24 28, 0 10, 28 10" fill="#FFCE54"/>
+          </svg>
+        </section>
+        <section class="svg__arrow">
+          <h2 class="svg__subtitle">Arrow</h2>
+          <svg class="svg__arrow" width="132" height="90" viewBox="0 0 132 90">
+            <polygon points="0 30, 0 60, 90 60, 60 90, 90 90, 132 45, 90 0, 60 0, 90 30, 0 30" fill="#ED5565"></polygon>
+          </svg>
+        </section>
+      </div>
     </main>
     @@include('blocks/footer.html')
 </body>

@@ -1,0 +1,146 @@
+.svg {
+    margin-top: 60px;
+    margin-bottom: 47px;
+    &__title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+        text-transform: uppercase;
+        color: #1E0606;
+    }
+    &__wrap {
+        margin-top: 50px;
+        display: flex;
+    }
+    &__subtitle {
+        visibility: hidden;
+        max-width: 0;
+        max-height: 0;
+    }
+    &__pict {
+        filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.2));
+    }
+    &__rect--left {
+        transform: translate(0%);
+        animation: rect-left ease 2s forwards;
+    }
+    &__rect--right {
+        transform: translate(0%);
+        animation: rect-right ease 2s forwards;    
+    }
+    &__sun {
+        animation: sun linear 5s forwards 2s;
+    }
+    &__stars {
+        position: relative;
+        margin-left: 90px;
+    }
+    &__stars-one {
+        position: absolute;
+        transform: scale(0);
+        animation: star-top 3s linear forwards 7s;
+        animation-iteration-count: infinite;
+    }
+    &__stars-two {
+        position: absolute;
+        left: 38px;
+        transform: scale(0);
+        animation: star-bottom 3s linear forwards 7s;
+        animation-iteration-count: infinite;
+    }
+    &__stars-three {
+        position: absolute;
+        left: 76px;
+        transform: scale(0);
+        animation: star-top 3s linear forwards 7s;
+        animation-iteration-count: infinite;
+    }
+    &__stars-four {
+        position: absolute;
+        left: 114px;
+        transform: scale(0);
+        animation: star-bottom 3s linear forwards 7s;
+        animation-iteration-count: infinite;
+    }
+    &__stars-five {
+        position: absolute;
+        left: 152px;
+        transform: scale(0);
+        animation: star-top 3s linear forwards 7s;
+        animation-iteration-count: infinite;
+    }
+    &__arrow {
+        position: relative;
+        margin-top: 50px;  
+        transform: translate(0) scale(0);   
+        animation: arrow 3s ease forwards 10s;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes rect-left {
+    0% { transform: translateX(0%);
+    }
+    50% { transform: translateX(-30%);      
+    }
+    100% { transform: translateX(0%);      
+    }
+} 
+
+@keyframes rect-right {
+    0% { transform: translateX(0%);      
+    }
+    50% { transform: translateX(30%);      
+    }
+    100% { transform: translateX(0%);      
+    }
+} 
+
+@keyframes sun {
+    0% { transform: translate(0,0);      
+    }
+    20% { transform: translate(30px,-10px);      
+    }
+    50% { transform: translate(60px,-12px);      
+    }
+    80% { transform: translate(90px,-10px);
+    }
+    100% { transform: translate(110px, 0px);      
+    }
+} 
+
+@keyframes star-top {
+    0% { transform: scale(0) translate(0, 0);
+         opacity: 0.5;
+    }
+    50% { transform: scale(1) translate(0, -15px);
+        opacity: 0.7;
+    }
+    100% {transform: scale(2) translate(0, -30px);
+        opacity: 1;
+        rotate: x 360deg;
+    }
+}
+
+@keyframes star-bottom {
+    0% { transform: scale(0) translate(0, 0);
+         opacity: 0.5;
+    }
+    50% { transform: scale(1) translate(0, 15px);
+        opacity: 0.7;
+    }
+    100% {transform: scale(2) translate(0, 30px);
+        opacity: 1;
+        rotate: x 360deg;
+    }
+}  
+
+@keyframes arrow {
+    0% { transform: translate(0) scale(1);       
+    }
+    100% { transform: translate(200px); 
+        rotate: (180deg);      
+    }
+}
