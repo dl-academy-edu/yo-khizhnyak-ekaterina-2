@@ -5,9 +5,26 @@
       <img src="./img/icon/Logo.svg" alt="logo" class="header__logo"></a>
     <nav class="header__nav header__left">
       <ul class="header__list">
-        <li class="header__list-item undotted header__change"><a href="blog.html" class="header__list-link">BLOG</a></li>
-        <li class="header__list-item undotted header__change"><a href="catalog.html" class="header__list-link">CATALOG</a></li>
-        <li class="header__list-item undotted header__change"><a href="#" class="header__list-link">ABOUT US</a></li>
+        @@include('blocks/header-item.html', {
+          "link": "blog.html",
+          "name": "BLOG"
+        })
+        @@include('blocks/header-item.html', {
+          "link": "catalog.html",
+          "name": "CATALOG"
+        })
+        @@include('blocks/header-item.html', {
+          "link": "#",
+          "name": "ABOUT US"
+        })
+        @@include('blocks/header-item.html', {
+          "link": "animation.html",
+          "name": "ANIMATION"
+        })
+        @@include('blocks/header-item.html', {
+          "link": "svg.html",
+          "name": "SVG"
+        })
       </ul>
     </nav>
     <ul class="header__list header-search">

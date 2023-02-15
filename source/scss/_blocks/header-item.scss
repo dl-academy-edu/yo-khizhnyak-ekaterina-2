@@ -1,0 +1,17 @@
+.header__change:hover {
+    opacity: 0.5;
+}
+  
+.header__change:active {
+    opacity: 0.2;
+}
+
+.header__list-link {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #1E0606;
+    margin-right: 20px;
+}

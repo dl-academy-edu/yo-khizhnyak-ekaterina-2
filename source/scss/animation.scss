@@ -1,0 +1,420 @@
+.animation {
+    margin-top: 60px;
+    &__title {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+        text-transform: uppercase;
+        color: #1E0606;
+    }
+}
+
+.breadcrumbs__list {
+    margin-top: 10px;
+}
+
+.animation__cloud {
+    width: 1400px;
+    height: 138px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.animation__cloud {
+    animation: cloud 60s linear forwards;
+    animation-iteration-count: infinite;
+}  
+
+.animation__cloud-one {
+    background-image: url('../img/animation/cloud-one.png');
+    background-repeat: no-repeat;
+    background-size: cover;    
+    width: 92px;
+    height: 27px;
+    position: absolute;
+    left: 80px;
+    top: 12px;
+    animation: animation__cloud linear 20s forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cloud {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.animation__cloud-two {
+    background-image: url('../img/animation/cloud-two.png');
+    background-repeat: no-repeat;
+    background-size: cover;    
+    width: 187px;
+    height: 40px;
+    position: absolute;
+    left: 355px;
+    top: 46px;
+}
+
+.animation__cloud-three {
+    background-image: url('../img/animation/cloud-three.png');
+    background-repeat: no-repeat;
+    background-size: cover;    
+    width: 157px;
+    height: 33px;
+    position: absolute;
+    left: 612px;
+    top: 10px;
+}
+
+.animation__cloud-four {
+    background-image: url('../img/animation/cloud-four.png');
+    background-repeat: no-repeat;
+    background-size: cover;    
+    width: 202px;
+    height: 42px;
+    position: absolute;
+    left: 727px;
+    top: 92px;    
+}
+
+.animation__cloud-five {
+    background-image: url('../img/animation/cloud-five.png');
+    background-repeat: no-repeat;
+    background-size: cover;    
+    width: 93px;
+    height: 27px;
+    position: absolute;
+    right: 289px;
+    top: 46px;
+}
+
+.animation__cloud-six {
+    background-image: url('../img/animation/cloud-six.png');
+    background-repeat: no-repeat;
+    background-size: cover;    
+    width: 165px;
+    height: 35px;
+    position: absolute;
+    top: 43px;
+    right: -22px;
+}
+
+.animation__sun {
+    background-image: url('../img/animation/sun.png');
+    background-repeat: no-repeat;
+    background-size: cover;    
+    width: 59px;
+    height: 59px;
+    position: absolute;
+    top: 0;
+    right: 172px;
+}
+
+.animation__town {
+    background-image: url('../img/animation/town.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 1400px;
+    height: 630px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 69px;
+}
+
+.animation__cars {
+    animation: cars 20s linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cars {
+    100% {
+        transform: translateX(100%);
+    }
+    
+}
+
+.animation__car-one {
+    background: url('../img/animation/Car-one.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 251px;
+    height: 100px;
+    position: absolute;
+    top: 290px;
+    left: -56px;
+}
+
+.animation__car-two {
+    background: url('../img/animation/Car-two.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 205px;
+    height: 97px;
+    position: absolute;
+    top: 288px;
+    left: 327px;
+}
+
+.animation__car-three {
+    background: url('../img/animation/Car-three.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 247px;
+    height: 66px;
+    position: absolute;
+    top: 304px;
+    left: 625px;
+}
+
+.animation__car-four {
+    background: url('../img/animation/Car-four.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 269px;
+    height: 127px;
+    position: absolute;
+    top: 274px;
+    right: -45px;
+}
+
+.animation__lantern-left {
+    background: url('../img/animation/Lanterns.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 151px;
+    height: 396px;
+    position: absolute;
+    top: 34px;
+    left: 435px;
+}
+
+.animation__lantern-right {
+    background: url('../img/animation/Lanterns.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 151px;
+    height: 396px;
+    position: absolute;
+    top: 34px;
+    right: -59px;
+}
+
+.animation__taxi {
+    background: url('../img/animation/taxi.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 887px;
+    height: 267px;
+    position: absolute;
+    top: 264px;
+    right: -42px;
+    opacity: 0;
+    animation: taxi 7s linear 5s;
+}
+
+@keyframes taxi {
+    0% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-1400px);    
+    }
+}
+
+.animation__message-taxi {
+    background: url('../img/animation/Message-taxi.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 169px;
+    height: 108px;
+    position: absolute;
+    top: 209px;
+    right: 363px;
+    opacity: 0;
+    animation: message-taxi 2s ease 8s;
+}
+
+@keyframes message-taxi {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.animation__woman {
+    background: url('../img/animation/woman.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 98px;
+    height: 268px;
+    position: absolute;
+    top: 319px;
+    left: 183px;
+}
+
+.animation__woman-arm {
+    background: url('../img/animation/woman-arm.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 64px;
+    height: 45px;
+    position: absolute;
+    top: 431px;
+    left: 209px; 
+    transform: rotate(0deg);
+    transform-origin: 9px top;
+    animation: woman-arm 2s ease 3s;
+}
+
+@keyframes woman-arm {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.animation__woman-message {
+    background: url('../img/animation/Messag-woman.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 169px;
+    height: 108px;
+    position: absolute;
+    top: 213px;
+    left: 89px;
+    opacity: 0;
+    animation: woman-message 2s ease 3s;
+}
+
+.animation__suitcases {
+    background: url('../img/animation/Suitcases.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 192px;
+    height: 96px;
+    position: absolute;
+    top: 492px;
+    left: 173px;
+    z-index: 3;
+}
+
+.animation__man-message {
+    background: url('../img/animation/Message-man.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 168px;
+    height: 86px;
+    position: absolute;
+    top: 148px;
+    left: 274px;
+    opacity: 0;
+    animation: man-message 2s ease 6s;
+}
+
+@keyframes man-message {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.animation__man-message-two {
+    background: url('../img/animation/man-message-two.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 168px;
+    height: 86px;
+    position: absolute;
+    top: 148px;
+    left: 274px;
+    opacity: 0;
+    animation: man-message-two 2s ease 10s;
+}
+
+@keyframes man-message-two {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.animation__man {
+    background: url('../img/animation/man.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 205px;
+    height: 354px;
+    position: absolute;
+    top: 233px;
+    left: 289px;
+}
+
+.animation__man-arm {
+    background: url('../img/animation/man-arm.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 89px;
+    height: 129px;
+    position: absolute;
+    top: 164px;
+    left: 300px;
+    transform: rotate(150deg);
+    transform-origin: 0 bottom;
+    animation: man-arm 2s ease 6s;
+}
+
+@keyframes man-arm {
+    0% {
+        transform: rotate(150deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(150deg);
+        
+    }
+}
+
+.animation__lantern {
+    background: url('../img/animation/Lantern.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 215px;
+    height: 563px;
+    position: absolute;
+    top: 25px;
+    right: 157px;
+}
+
+@keyframes woman-message {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
