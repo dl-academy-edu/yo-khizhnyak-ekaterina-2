@@ -1,8 +1,17 @@
 .form {
     max-width: 680px;
-    max-height: 542px;
+    height: 542px;
     background-color: #E5EAF8;
     padding: 42px 40px;
+    @media (max-width: $media-tablet) {
+        max-width: 648px;
+        padding: 42px 56px;
+    }
+    @media (max-width: $media-mobile) {
+        max-width: 335px;
+        max-height: 555px;
+        padding: 25px 25px;
+    }
     &__label {
         margin-bottom: 3px;
         font-family: 'Open Sans', sans-serif;
@@ -11,10 +20,16 @@
         font-size: 14px;
         line-height: 19px;
         color: #1E0606;
+        @media (max-width: $media-tablet) {
+            line-height: 16px;
+        }
         &__wrapper {
             display: flex;
             flex-direction: column;
             margin-bottom: 20px;
+            @media (max-width: $media-mobile) {
+                margin-bottom: 15px;
+            }
         }
     }
     &__input-name {
@@ -24,6 +39,9 @@
         padding-top: 16px;
         padding-bottom: 11px;
         padding-left: 20px;
+        @media (max-width: $media-mobile) {
+            height: 40px;
+        }
         &::placeholder {
             font-family: 'Open Sans', sans-serif;
             font-style: normal;
@@ -31,17 +49,39 @@
             font-size: 18px;
             line-height: 25px;
             color: #1E0606;
+            @media (max-width: $media-tablet) {
+                font-size: 16px;
+                line-height: 19px;
+            }
+            @media (max-width: $media-mobile) {
+                font-size: 14px;
+                line-height: 16px;
+            }
         }
     }
     &__two-input {
         display: flex;
         max-width: 600px;
         gap: 20px;
+        @media (max-width: $media-tablet) {
+            max-width: 536px;
+        }
+        @media (max-width: $media-mobile) {
+            flex-direction: column;
+            gap: 0px;
+        }
     }
     &__input {
         width: 290px;
         height: 50px;
         border: 1px solid rgba(0, 0, 0, 0.2);
+        @media (max-width: $media-tablet) {
+            width: 258px;
+        }
+        @media (max-width: $media-mobile) {
+            width: 285px;
+            height: 40px;
+        }
     }
     &__input-change:hover {
         border: 1px solid #C29974;
@@ -64,10 +104,31 @@
         position: relative;
         margin-bottom: 19px;
         margin-top: 20px;
+        @media (max-width: $media-mobile) {
+            margin-top: 15px;
+        }
         &__input {
             position: absolute;
             opacity: 0;
             margin: 0;
+            &:checked +.form__checkbox__text::before{
+                background-image: url('../img/icon/contact-checked.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-position-x: right;
+                background-position-y: top;
+                width: 19px;
+                height: 19px;
+                background-color: #E5EAF8;
+            }
+            &:disabled + .form__checkbox__text::before {
+                content: "";
+                background-image: url("../img/icon/square-disabled.svg");
+            }
+            &:disabled + .form__checkbox__text {
+                color: #908484;
+                text-decoration: none;
+            }
         }
         &__contact{
             font-family: 'Open Sans', sans-serif;
@@ -82,6 +143,9 @@
             line-height: 16px;
             color: #1E0606;
             margin-left: 35px;
+            @media (max-width: $media-tablet) {
+                margin-left: 25px;
+            }
             &::before {
                 position: absolute;
                 content: "";
@@ -94,6 +158,10 @@
                 width: 19px;
                 height: 19px;
                 margin-left: -35px;
+                @media (max-width: $media-tablet) {
+                    left: 25px;
+                    margin-left: -25px;
+                }
             }
             &:active {
                 text-decoration: underline;
@@ -103,27 +171,4 @@
             }
         }
     }
-}
-
-// как правильно оформить записи ниже?
-
-.form__checkbox__input:checked +.form__checkbox__text::before{
-    background-image: url('../img/icon/contact-checked.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position-x: right;
-    background-position-y: top;
-    width: 19px;
-    height: 19px;
-    background-color: #E5EAF8;
-}
-
-.form__checkbox__input:disabled + .form__checkbox__text::before {
-    content: "";
-    background-image: url("../img/icon/square-disabled.svg");
-}
-
-.form__checkbox__input:disabled + .form__checkbox__text {
-    color: #908484;
-    text-decoration: none;
 }

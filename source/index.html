@@ -43,8 +43,14 @@
             "name": "EXPLORE NOW"
           })
         </div>    
+        <picture>
+          <source srcset="./img/monster-mobile.png, ./img/monster-mobile-2x.png 2x"
+          media="(max-width: 375px)">
+          <source srcset="./img/monster-tablet.png, ./img/monster-tablet-2x.png 2x" 
+          media="(max-width: 768px)">
+          <img class="banner__img" src="./img/monster.png" alt="OOH NOO" width="635" height="461">
+        </picture>
         <p class="banner__text">FREE (CONTINENTAL) USA SHIPPING ON ALL ORDERS OF $100 USD OR MORE!</p>
-        <img class="banner__img" src="./img/monster.png" alt="OOH NOO" width="635" height="461">
       </section>
       <section class="products container">
         <h2 class="products__title">CATEGORY PRODUCTS</h2>
@@ -52,26 +58,34 @@
               @@include('blocks/product-list.html',{
                 "name": "APPAREL KIDS",
                 "img": "products__list-item__one",
-                "link": "products__link__apparel",
-                "href": "#"
+                "link": "products__link-main",
+                "link-item": "products__link-main__apparel",
+                "href": "#",
+                "list": "products__main"
               })
               @@include('blocks/product-list.html',{
                 "name": "HOLIDAY SHOP",
                 "img": "products__list-item__two",
-                "link": "products__link__holiday",
-                "href": "#"
+                "link": "products__link-main",
+                "link-item": "products__link-main__holiday",
+                "href": "#",
+                "list": "products__main"
               })
               @@include('blocks/product-list.html',{
                 "name": "TOYS",
                 "img": "products__list-item__three",
-                "link": "products__link__toys",
-                "href": "./toys.html"
+                "link": "products__link-main",
+                "link-item": "products__link-main__toys",
+                "href": "./toys.html",
+                "list": "products__main"
               })
               @@include('blocks/product-list.html',{
                 "name": "ACCESSORIES",
                 "img": "products__list-item__four",
-                "link": "products__link__accessories",
-                "href": "#"
+                "link": "products__link-main",
+                "link-item": "products__link-main__accessories",
+                "href": "#",
+                "list": "products__main"
               })
             </ul>             
           <div class="products__modern">
@@ -81,7 +95,13 @@
           </div>
       </section>
       <section class="delivery container">
-        <img src="./img/womanInDress.jpg" alt="woman" width="480" height="559">
+        <picture>
+          <source srcset="./img/woman-mobile.jpg, ./img/woman-mobile-2x.jpg 2x" width="335" height="357"
+          media="(max-width: 375px)">
+          <source srcset="./img/woman-tablet.jpg , ./img/woman-tablet-2x.jpg 2x" width="258" height="512" 
+          media="(max-width: 768px)">
+          <img class="delivery__photo" src="./img/womanInDress.jpg" alt="woman" width="480" height="559">
+        </picture>        
         <div class="delivery__block">
           <h2 class="delivery__title">DELIVERY</h2>
           <ul>
@@ -104,29 +124,26 @@
             @@include('blocks/socialnetwork.html', {
               "link": "https://mail.ru/",
               "img": "/img/mail.ru.png",
-              "alt": "mail",
-              "width": "193",
-              "height": "60"            })
+              "alt": "mail"
+         
+            })
             @@include('blocks/socialnetwork.html', {
               "link": "https://apple.com",
               "img": "/img/apple.png",
-              "alt": "apple",
-              "width": "179",
-              "height": "61"            
+              "alt": "apple"
+           
             })
             @@include('blocks/socialnetwork.html', {
               "link": "https://eltexcm.ru",
               "img": "/img/eltex.png",
-              "alt": "eltex",
-              "width": "216",
-              "height": "46" 
+              "alt": "eltex"
+            
             })
             @@include('blocks/socialnetwork.html', {
               "link": "https://owox.com",
               "img": "/img/owox.png",
-              "alt": "owox",
-              "width": "211",
-              "height": "40" 
+              "alt": "owox"
+             
             })
           </ul>
       </section>
@@ -144,7 +161,7 @@
         <div class="aboutUs__contacts">
           <h2 class="aboutUs__contacts__title">CONTACTS</h2>
           <p class="aboutUs__contacts__text">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
-          <iframe class="aboutUs__contacs__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.5371506249517!2d49.288149915401306!3d53.51246308001415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x416879a82611632d%3A0xb18d94ffcf91e387!2zREwgQWNhZGVteSDigJQg0LrRg9GA0YHRiyDQv9GA0L7Qs9GA0LDQvNC80LjRgNC-0LLQsNC90LjRjw!5e0!3m2!1sru!2sru!4v1669022065024!5m2!1sru!2sru" width="483" height="196" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe class="aboutUs__contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.5371506249517!2d49.288149915401306!3d53.51246308001415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x416879a82611632d%3A0xb18d94ffcf91e387!2zREwgQWNhZGVteSDigJQg0LrRg9GA0YHRiyDQv9GA0L7Qs9GA0LDQvNC80LjRgNC-0LLQsNC90LjRjw!5e0!3m2!1sru!2sru!4v1669022065024!5m2!1sru!2sru" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </section>
     </main>

@@ -2,6 +2,12 @@
     display: flex;
     flex-direction: column;
     max-width: 380px;
+    @media (max-width: 779px) {
+        max-width: 314px;
+    }
+    @media (max-width: $media-mobile) {
+        max-width: 335px;
+    }
     &__date {
         font-family: 'Open Sans', sans-serif;
         font-style: normal;
@@ -10,6 +16,14 @@
         line-height: 22px;
         color: #818181;
         padding-top: 20px;
+        @media (max-width: 779px) {
+            padding-top: 15px;
+        }
+        @media (max-width: $media-mobile) {
+            padding-top: 10px;
+            font-size: 14px;
+            line-height: 16px;
+        }
     }
     &__title {
         font-family: 'Montserrat', sans-serif;
@@ -19,6 +33,14 @@
         line-height: 31px;
         color: #1E0606;
         margin-top: 7px;
+        @media (max-width: 779px) {
+            margin-top: 5px;
+        }
+        @media (max-width: $media-mobile) {
+            margin-top: 4px;
+            font-size: 18px;
+            line-height: 22px;
+        }
         &::active {
             text-decoration: underline;
         }
@@ -34,5 +56,13 @@
         line-height: 25px;
         color: #1E0606;
         margin-top: 15px;
+        @media (max-width: 779px) {
+            margin-top: 10px;
+        }
+        @media (max-width: $media-mobile) {
+            margin-top: 7px;
+            font-size: 16px;
+            line-height: 22px;
+        }
     } 
 }

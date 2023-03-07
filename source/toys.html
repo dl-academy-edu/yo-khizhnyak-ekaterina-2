@@ -25,7 +25,8 @@
     @@include('blocks/header.html')
     <main>
       <section class="toys container">
-        <h1 class="toys__title">TOY FOR KIDS</h1>   
+        <h1 class="toys__title">TOY FOR KIDS</h1> 
+        <h1 class="toys__title-tablet">Category Products</h1>    
         <ul class="breadcrumbs__list">
           @@include('blocks/breadcrumbs.html', {
             "text": "Home",
@@ -39,7 +40,6 @@
         </ul>
       </section>
       <section class="filter">
-        <!-- что в filter нужно вынести в iclude? каждый div или li из div? -->
         <h2 class="filter__title">Filter</h2>
         <div class="filter__cost">
           <p class="filter__cost__name">Cost</p>
