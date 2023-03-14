@@ -10,16 +10,50 @@
         margin: 0 auto;
         word-spacing: 16px;
         margin-top: 60px;
+        @media (max-width: $media-tablet) {
+            font-size: 36px;
+            line-height: 44px;
+            margin-top: 70px;
+        }
+        @media (max-width: $media-mobile) {
+            font-size: 24px;
+            line-height: 29px;
+            margin-top: 46px;
+        }
     }
     &__wrapper {
         display: flex;
         margin-top: 50px;
         margin-bottom: 61px;
+        @media (max-width: $media-tablet) {
+        flex-direction: column;
+            margin-top: 45px;
+            margin-bottom: 50px;
+        }
+        @media (max-width: $media-mobile) {
+            margin-top: 25px;
+        }
+    }
+    &__form{
+        @media (max-width: $media-tablet) {
+            display: flex;
+            order: 2;
+            margin-top: 45px;
+        }
+        @media (max-width: $media-mobile) {
+            margin-top: 25px;
+        }
     }
     &__info {
         display: flex;
         flex-direction: column;
         padding-left: 120px;
+        @media (max-width: $media-tablet) {
+            display: flex;
+            order: 1;
+            text-align: center;
+            padding-left: 0px;
+        }
     }
     &__subtitle {
         visibility: hidden;
@@ -34,6 +68,11 @@
         line-height: 22px;
         color: #1E0606;
         padding-bottom: 20px;
+        @media (max-width: $media-mobile) {
+            font-size: 14px;
+            line-height: 19px;
+            padding-bottom: 15px;
+        }
     }
     &__info-text {
         font-family: 'Montserrat';
@@ -43,5 +82,8 @@
         line-height: 34px;
         text-transform: uppercase;
         color: #C29974;
+        @media (max-width: $media-mobile) {
+            font-size: 24px;
+        }
     }
 }

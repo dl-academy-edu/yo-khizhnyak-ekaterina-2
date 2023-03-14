@@ -4,6 +4,13 @@
     align-items: center;
     margin-bottom: 50px;
     margin-top: 15px;
+    @media (max-width: $media-tablet) {
+        margin-bottom: 30px;
+        margin-top: 10px;
+      }
+    @media (max-width: $media-mobile) {
+        margin-bottom: 20px;
+    }
 }
   
 .breadcrumbs__link {
@@ -13,6 +20,10 @@
     font-size: 20px;
     line-height: 26px;
     color: #1E0606;
+    @media (max-width: $media-mobile) {
+        font-size: 16px;
+        line-height: 21px;
+    }
 }
   
 .breadcrumbs__link::after {
@@ -24,6 +35,10 @@
     width: 8px;
     height: 12px;
     padding-left: 48px;
+    @media (max-width: $media-mobile) {
+        width: 6px;
+        height: 9px;
+    }
 }
   
 .breadcrumbs__list-item:last-child .breadcrumbs__link::after {

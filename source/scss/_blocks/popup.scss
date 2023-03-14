@@ -18,9 +18,8 @@
     left: 0;
     z-index: 1;
     background-color: rgba(125, 151, 218, 0.8);
-    padding: 7% 30%;
     max-width: 100%;
-    min-height: 30%;
+    height: 100%;
 }
   
 .open {
@@ -30,9 +29,20 @@
 .modal__wrap {
     display: flex;
     flex-direction: row;
-    margin-left: 32%;
     margin: 7% 28%;
     z-index: 100;
+    gap: 10px;
+    height: max-content;
+    @media (max-width: $media-tablet) {
+        flex-direction: column-reverse;
+        margin-left: 8%;
+        margin-top: 30%;
+
+    }
+    @media (max-width: $media-mobile) {
+        margin-left: 5%;
+        margin-top: 32%;
+    }
 }
   
 .close {
@@ -44,6 +54,10 @@
     cursor: pointer;
     width: 15px;
     height: 15px;
-    margin-left: 10px;
-    margin-top: 0px;
+    @media (max-width: $media-tablet) {
+        margin-left: 633px;
+    }
+    @media (max-width: $media-mobile) {
+        margin-left: 320px;
+    }
 }

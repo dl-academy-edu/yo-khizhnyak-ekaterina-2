@@ -7,8 +7,8 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 98px;
-    left: 87px;
+    top: 18%;
+    left: 23%;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -19,9 +19,17 @@
     color: #1E0606;
     text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
     background-color: #E5EAF8;
-    width: 207px;
-    height: 207px;
+    width: 54.5%;
+    height: 41.5%;
     opacity: 0;
+    @media (max-width: $media-tablet) {
+        font-size: 22px;
+        line-height: 25px;
+    }
+    @media (max-width: $media-mobile) {
+        font-size: 18px;
+        line-height: 21px;
+    }
 }
 
 .toys__link-item:hover {
@@ -30,6 +38,25 @@
 
 .toys__link-item:active {
     opacity: 0.67;
+}
+
+.toys__img {
+    @media (max-width: 1180px) {
+        width: 282px;
+        height: 291px;
+    }
+    @media (max-width: 890px) {
+        width: 242px;
+        height: 251px;
+    }
+    @media (max-width: $media-tablet) {
+        width: 202px;
+        height: 211px;
+    }
+    @media (max-width: 425px) {
+        width: 159px;
+        height: 167px;
+    }
 }
 
 .toys__list-name {
@@ -42,6 +69,17 @@
     color: #1E0606;
     padding-top: 28px;
     padding-left: 3px;
+    @media (max-width: $media-tablet) {
+        font-size: 12px;
+        line-height: 16px;
+        padding-top: 15px;
+        max-width: 202px;
+        padding-left: 0px;
+    }
+    @media (max-width: $media-mobile) {
+        padding-top: 10px;
+        max-width: 159px;
+    }
 }
 
 .toys__cost {
@@ -55,4 +93,15 @@
     padding-top: 17px;
     padding-bottom: 25px;
     padding-left: 3px;
+    @media (max-width: $media-tablet) {
+        font-size: 14px;
+        line-height: 19px;
+        padding-top: 5px;
+        padding-bottom: 30px;
+    }
+    @media (max-width: $media-mobile) {
+        font-size: 12px;
+        line-height: 16px;
+        padding-bottom: 15px;
+    }
 }

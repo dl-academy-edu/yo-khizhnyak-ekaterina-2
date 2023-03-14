@@ -7,6 +7,9 @@
         justify-self: center;
         align-items: center;
         gap: 64px;
+        @media (max-width: $media-mobile) {
+            gap: 51px;
+        }
     }
     &__number {
         font-family: 'Montserrat', sans-serif;
@@ -16,6 +19,10 @@
         line-height: 20px;
         text-transform: uppercase;
         color: #1E0606;
+        @media (max-width: $media-mobile) {
+            font-size: 14px;
+            line-height: 17px;
+        }
         &:hover {
             color: #AAAAAA;
         }
@@ -26,6 +33,16 @@
     &__number-active {
         color: #C29974;
         padding-right: 5px;
+        @media (max-width: $media-mobile) {
+            padding-right: 1px;
+        }
+    }
+}
+
+.pagination__vector {
+    @media (max-width: $media-mobile) {
+        width: 12px;
+        height: 24px;
     }
 }
 
