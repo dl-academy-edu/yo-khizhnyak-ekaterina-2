@@ -21,6 +21,11 @@
             margin-top: 46px;
         }
     }
+    &__title-hidden {
+        visibility: hidden;
+        max-width: 0;
+        max-height: 0;
+    }
     &__wrapper {
         display: flex;
         margin-top: 50px;

@@ -1,0 +1,29 @@
+.breadcrumb-item+.breadcrumb-item::before {
+    content: var(--bs-breadcrumb-divider, "");
+}
+
+.breadcrumb {
+    --bs-breadcrumb-item-padding-x: 0;
+}
+
+.center{
+	display: block;
+	margin: 0 auto;
+}
+
+.footer__box {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.card-img-top {
+    @media (max-width: $media-tablet) {
+        height: 427px;
+      }
+}
+
+.carousel-img {
+    @media (max-width: $media-mobile) {
+       height: 50%;
+    }
+}

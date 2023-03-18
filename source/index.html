@@ -100,6 +100,8 @@
           media="(max-width: 375px)">
           <source srcset="./img/woman-tablet.jpg , ./img/woman-tablet-2x.jpg 2x" width="258" height="512" 
           media="(max-width: 768px)">
+          <source srcset="./img/woman-2x.jpg 2x" 
+          media="(min-width: 769px)">
           <img class="delivery__photo" src="./img/womanInDress.jpg" alt="woman" width="480" height="559">
         </picture>        
         <div class="delivery__block">
@@ -168,6 +170,7 @@
     @@include('blocks/footer.html')
     @@include('blocks/popup.html')
     <script src="js/app.js" defer></script>
-    <script src="js/popup.js"></script>        
+    <script src="js/popup.js"></script>
+    <script src="js/burger.js"></script>          
   </body>
 </html>

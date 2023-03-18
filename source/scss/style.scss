@@ -35,6 +35,8 @@
 @import "toys";
 @import "fonts";
 @import "animation";
+@import "bootstrap";
+@import "grid";
 
 
 // /*
@@ -85,7 +87,6 @@
   &__img {
     position: absolute;
     bottom: 37px;
-    // top: -88px;
     right: 99px;
     @media (max-width: 1048px) {
       right: 8px;
@@ -156,6 +157,7 @@
       width: 31px;
       height: 3px;
       cursor: pointer;
+      transition: 0.4s;
       @media (max-width: $media-tablet) {
         width: 27px;
         height: 3px;
@@ -366,6 +368,7 @@
   &__list {
     padding-top: 11px;
     padding-bottom: 11px; 
+    transition: 0.4s;
     @media (max-width: $media-tablet) {
       padding-top: 8px;
       padding-bottom: 7px; 
@@ -401,6 +404,7 @@
     line-height: 34px;
     color: #1E0606;
     padding-right: 180px;
+    transition: 0.4s;
     @media (max-width: $media-tablet) {
       font-size: 24px;
       line-height: 31px;

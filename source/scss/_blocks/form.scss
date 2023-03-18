@@ -143,6 +143,7 @@
             line-height: 16px;
             color: #1E0606;
             margin-left: 35px;
+            transition: 0.4s;
             @media (max-width: $media-tablet) {
                 margin-left: 25px;
             }

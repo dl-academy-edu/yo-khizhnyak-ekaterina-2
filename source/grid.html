@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>DL Academy</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <script>
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+    </script>
+
+    <!-- Favicon -->
+
+    <!-- build:css -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <!-- endbuild -->
+  </head>
+  <body>
+    @@include('blocks/header.html')
+    <main>
+      <div class="grid__start container">
+        <h1 class="grid__title">Grid</h1>
+          <ul class="breadcrumbs__list">
+            @@include('blocks/breadcrumbs.html', {
+              "text": "Home",
+              "path": "/"})
+            @@include('blocks/breadcrumbs.html', {
+              "text": "Grid",
+              "path": "#"})
+          </ul>
+        </div>
+          <div class="grid">
+            <div class="grid__box grid__box1">
+              <div class="grid__box1__inner">
+                <p class="grid__box1__name">IPHONE 6S</p>
+                <p class="grid__box1__text">3D Touch. 12MP photos. 4K video. One powerful phone</p>
+                <a class="grid__box1__link" href="#">Learn more or visit an Apple Store today</a>
+              </div>
+              <img class="grid__box1__img" src="./img/iphone.jpg" alt="iphone" width="249" height="345">
+            </div>
+            <div class="grid__box grid__box2">
+              <a class="grid__box2__link" href="#">LEARN MORE</a>
+              <p class="grid__box2__text">How to Use Rotary Evaporator in Chemical Labs</p>
+              <a class="grid__box2__link2" href="iphone">Download now</a>
+            </div>
+            <div class="grid__box grid__box3">
+              <img class="grid__box3__img" src="./img/keyboard.png" alt="keyboard">
+              <p class="grid__box3__text">Our Brand New Keyboard</p>
+              <a class="grid__box3__link" href="#">LEARN ›</a>
+            </div>
+            <div class="grid__box grid__box4">
+                <div class="grid__box4__inner">
+                  <p class="grid__box4__text">IMAC.RETINA</p>
+                  <p class="grid__box4__text2">Hardly a month passes these days where</p>
+                </div>
+                <div class="grid__box4__inner2">
+                  <p class="grid__box4__text3">Apple may be experimenting in the virtual reality space. The company has been granted a patent for a head-mounted virtual reality device that would use the iPhone screen as the display.</p>
+                  <a class="grid__box4__link" href="#">DOWNLOAD NOW ›</a>
+                </div>
+              <img src="./img/tv.png" alt="TV" width="352" height="164">
+            </div>
+            <div class="grid__box grid__box5">
+              <img class="grid__box5__img" src="./img/disk.png" alt="disk" width="300" height="300">
+              <p class="grid__box5__name">iCloud</p>
+              <p class="grid__box5__text">With iCloud, you always have the latest versions of your most important things — like documents, apps, notes, and contacts — on whatever device you’re using.</p>
+              <button class="grid__box5__button">LEARN MORE</button>
+            </div>
+            <div class="grid__box grid__box6">
+              <p class="grid__box6__text">BEST CHOICE</p>
+              <p class="grid__box6__name">Much MuchBetter Experience</p>
+              <img class="grid__box6__img" src="./img/laptop.png" alt="laptop" width="700" height="275">
+            </div>
+            <div class="grid__box grid__box7">
+              <img class="grid__box7__img" src="./img/joystick.png" alt="joystick">
+              <p class="grid__box7__name">Games ourpasion</p>
+              <a class="grid__box7__link" href="#">LEARN ›</a>
+            </div>
+            <div class="grid__box grid__box8">
+              <img class="grid__box8__img" src="./img/icon-inst.png" alt="icon">
+              <p class="grid__box8__text">Follow me ›</p>
+            </div>
+            <div class="grid__box grid__box9">
+              <img class="grid__box9__img" src="./img/tv-grid.png" alt="TV">
+              <p class="grid__box9__text">More than just a display,  it’s a vision</p>
+            </div>
+          </div>
+    </main>
+    @@include('blocks/footer.html')    
+</body>
+</html>
