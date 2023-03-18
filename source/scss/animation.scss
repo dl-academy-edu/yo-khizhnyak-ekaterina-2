@@ -10,9 +10,7 @@
         margin-top: 46px;
     }
     &__title {
-        font-family: 'Montserrat', sans-serif;
-        font-style: normal;
-        font-weight: 700;
+        @include montserrat-bold;
         font-size: 36px;
         line-height: 44px;
         text-transform: uppercase;

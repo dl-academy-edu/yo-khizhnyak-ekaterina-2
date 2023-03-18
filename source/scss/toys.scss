@@ -12,9 +12,7 @@
         margin-bottom: 20px;
     }
     &__title {
-        font-family: 'Montserrat', sans-serif;
-        font-style: normal;
-        font-weight: 700;
+        @include montserrat-bold;
         color: #1E0606;
         font-size: 40px;
         line-height: 49px;
@@ -25,9 +23,7 @@
         }
     }
     &__title-tablet {
-        font-family: 'Montserrat', sans-serif;
-        font-style: normal;
-        font-weight: 700;
+        @include montserrat-bold;
         font-size: 36px;
         line-height: 44px;
         text-transform: uppercase;
@@ -76,9 +72,7 @@
             margin-right: 20px;
         }
         &__name {
-            font-family: 'Open Sans', sans-serif;
-            font-style: normal;
-            font-weight: 700;
+            @include open-sans-bold;
             font-size: 16px;
             line-height: 22px;
             color: #1E0606;
@@ -126,9 +120,7 @@
             }
         }
         &__value {
-            font-family: 'Open Sans', sans-serif;
-            font-style: normal;
-            font-weight: 400;
+            @include open-sans-400;
             font-size: 16px;
             line-height: 22px;
             color: #1E0606;
@@ -149,9 +141,7 @@
             padding-top: 25px;
         }
         &__name {
-            font-family: 'Open Sans', sans-serif;
-            font-style: normal;
-            font-weight: 700;
+            @include open-sans-bold;
             font-size: 16px;
             line-height: 22px;
             color: #1E0606;
@@ -191,9 +181,7 @@
             }
         }
         &__label {
-            font-family: 'Open Sans';
-            font-style: normal;
-            font-weight: 400;
+            @include open-sans-400;
             font-size: 16px;
             line-height: 22px;
             color: #1E0606;
@@ -239,9 +227,7 @@
             padding-top: 25px;
         }
         &__name {
-            font-family: 'Open Sans', sans-serif;
-            font-style: normal;
-            font-weight: 700;
+            @include open-sans-bold;
             font-size: 16px;
             line-height: 22px;
             color: #1E0606;
@@ -283,9 +269,7 @@
             }            
         }
         &__choise {
-            font-family: 'Open Sans', sans-serif;
-            font-style: normal;
-            font-weight: 400;
+            @include open-sans-400;
             font-size: 16px;
             line-height: 22px;
             color: #1E0606;
@@ -339,9 +323,7 @@
             padding-top: 25px;
         }
         &__name {
-            font-family: 'Open Sans', sans-serif;
-            font-style: normal;
-            font-weight: 700;
+            @include open-sans-bold;
             font-size: 16px;
             line-height: 22px;
             color: #1E0606;
@@ -377,15 +359,13 @@
             }
         }
         &__value {
-            font-family: 'Open Sans';
-            font-style: normal;
-            font-weight: 400;
+            @include open-sans-400;
             font-size: 16px;
             line-height: 22px;
             color: #1E0606;
             width: 80px;
             height: 35px;
-            background-color: #FFFFFF;
+            background-color: $color-bg;
             padding: 7px 19px 6px 19px;
             @media (max-width: 450px) {
                 font-size: 14px;
@@ -397,7 +377,7 @@
         &__value-mini {
             width: 80px;
             height: 35px;
-            background-color: #FFFFFF;
+            background-color: $color-bg;
             padding: 7px 28px 6px 28px;
             @media (max-width: 450px) {
                 height: 29px;
