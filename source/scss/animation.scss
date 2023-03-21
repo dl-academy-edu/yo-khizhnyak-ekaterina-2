@@ -1,16 +1,16 @@
 .animation {
     margin-top: 60px;
     overflow: hidden;
+    margin-bottom: 69px;
     @media (max-width: $media-tablet) {
         margin-top: 70px;
+        margin-bottom: 50px;
     }
     @media (max-width: $media-mobile) {
         margin-top: 46px;
     }
     &__title {
-        font-family: 'Montserrat', sans-serif;
-        font-style: normal;
-        font-weight: 700;
+        @include montserrat-bold;
         font-size: 36px;
         line-height: 44px;
         text-transform: uppercase;
@@ -20,412 +20,733 @@
             line-height: 29px;
         }
     }
+    &__wrapper {
+        max-width: 1400px;
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    &__cloud {
+        overflow: hidden;
+        max-width: 1400px;
+        height: 138px;
+        margin: 0 auto;
+        @media (max-width: $media-tablet) {
+            height: 80px;
+            width: 768px;
+        }
+        @media (max-width: $media-mobile) {
+            height: 40px;
+            width: 375px;
+        }
+    } 
+    &__img {
+        @media (max-width: $media-tablet) {
+            transform: scale(0.549);
+        }
+        @media (max-width: $media-mobile) {
+            transform: scale(0.25);
+        }
+    }
+    &__cloud-one {
+        background-image: url('../img/animation/cloud-one.png');
+        background-repeat: no-repeat;
+        background-size: cover;   
+        width: 92px;
+        height: 27px;
+        position: absolute;
+        left: 5.8%;
+        top: 9%;
+        animation: cloud 20s linear forwards;
+        animation-iteration-count: infinite;
+        @media (max-width: $media-tablet) {
+            animation: cloud-media-tablet 20s linear;
+            animation-iteration-count: infinite;
+            transform: scale(0.549);
+            left: 3.7%;
+            top: 1%;
+        }
+        @media (max-width: $media-mobile) {
+            animation: cloud-media-mobile 20s linear;
+            animation-iteration-count: infinite;
+            transform: scale(0.25);
+            left: -3%;
+            top: -5.5%;
+        }
+    }
+    &__cloud-two {
+        background-image: url('../img/animation/cloud-two.png');
+        background-repeat: no-repeat;
+        background-size: cover;    
+        width: 187px;
+        height: 40px;
+        position: absolute;
+        left: 25.3%;
+        top: 33%;
+        animation: cloud 40s linear forwards;
+        animation-iteration-count: infinite;
+        @media (max-width: $media-tablet) {
+            animation: cloud-media-tablet 40s linear;
+            animation-iteration-count: infinite;
+            transform: scale(0.549);
+            left: 20.5%;
+            top: 11%;
+        }
+        @media (max-width: $media-mobile) {
+            animation: cloud-media-mobile 40s linear;
+            animation-iteration-count: infinite;
+            transform: scale(0.25);
+            left: 7%;
+            top: 4%;
+        }
+    }
+    &__cloud-three {
+        background-image: url('../img/animation/cloud-three.png');
+        background-repeat: no-repeat;
+        background-size: cover;    
+        width: 157px;
+        height: 33px;
+        position: absolute;
+        left: 43.7%;
+        top: 6%;
+        animation: cloud 35s linear forwards;
+        animation-iteration-count: infinite;
+        @media (max-width: $media-tablet) {
+            animation: cloud-media-tablet 35s linear;
+            animation-iteration-count: infinite;
+            transform: scale(0.549);
+            left: 40%;
+            top: 1%;
+        }
+        @media (max-width: $media-mobile) {
+            animation: cloud-media-mobile 35s linear;
+            animation-iteration-count: infinite;
+            transform: scale(0.25);
+            left: 28%;
+            top: -5.5%;
+        }
+    }
+    &__cloud-four {
+        background-image: url('../img/animation/cloud-four.png');
+        background-repeat: no-repeat;
+        background-size: cover;    
+        width: 202px;
+        height: 42px;
+        position: absolute;
+        left: 51.8%;
+        top: 66%;    
+        animation: cloud 35s linear forwards;
+        animation-iteration-count: infinite;
+        @media (max-width: $media-tablet) {
+            animation: cloud-media-tablet 35s linear;
+            animation-iteration-count: infinite;
+            transform: scale(0.549);
+            left: 46%;
+            top: 35%;
+        }
+        @media (max-width: $media-mobile) {
+            animation: cloud-media-mobile 35s linear;
+            animation-iteration-count: infinite;
+            transform: scale(0.25);
+            left: 32%;
+            top: 35%;
+        }
+    }
+    &__cloud-five {
+        background-image: url('../img/animation/cloud-five.png');
+        background-repeat: no-repeat;
+        background-size: cover;    
+        width: 93px;
+        height: 27px;
+        position: absolute;
+        right: 20.5%;
+        top: 32%;
+        animation: cloud 20s linear forwards;
+        animation-iteration-count: infinite;
+        @media (max-width: $media-tablet) {
+            animation: cloud-media-tablet 20s linear forwards;
+            animation-iteration-count: infinite;
+            transform: scale(0.549);
+            right: 18%;
+            top: 11%;
+        }
+        @media (max-width: $media-mobile) {
+            animation: cloud-media-mobile 20s linear forwards;
+            animation-iteration-count: infinite;
+            transform: scale(0.25);
+            right: 11%;
+            top: 15%;
+        }
+    }
+    &__cloud-six {
+        background-image: url('../img/animation/cloud-six.png');
+        background-repeat: no-repeat;
+        background-size: cover;    
+        width: 165px;
+        height: 35px;
+        position: absolute;
+        top: 30%;
+        right: -1.6%;
+        animation: cloud 30s linear forwards;
+        animation-iteration-count: infinite;
+        @media (max-width: $media-tablet) {
+            animation: cloud-media-tablet 35s linear forwards;
+            animation-iteration-count: infinite;
+            transform: scale(0.549);
+            right: -7%;
+            top: 9.5%;
+        }
+        @media (max-width: $media-mobile) {
+            animation: cloud-media-mobile 35s linear forwards;
+            animation-iteration-count: infinite;
+            transform: scale(0.25);
+            right: -19%;
+            top: 2%;
+        }
+    }
+    &__sun {
+        background-image: url('../img/animation/sun.png');
+        background-repeat: no-repeat;
+        background-size: cover;    
+        width: 59px;
+        height: 59px;
+        position: absolute;
+        top: 0;
+        right: 12.5%;
+        @media (max-width: $media-tablet) {
+            transform: scale(0.549);
+            right: 11%;
+            top: -8%;
+        }
+        @media (max-width: $media-mobile) {
+            transform: scale(0.25);
+            right: 6%;
+            top: -55%;
+        }
+    }
+    &__town {
+        background-image: url('../img/animation/town.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+        max-width: 1400px;
+        height: 630px;
+        margin: 0 auto;
+        position: relative;
+        @media (max-width: $media-tablet) {
+            width: 100%;
+            background-size: 113% 100%;
+            height: 384px;
+            margin-top: -37px;
+        }
+        @media (max-width: $media-mobile) {
+            margin-top: -13px;
+            background-position: 67%;
+            height: 182px;
+        }
+    }
+    &__car-one {
+        background: url('../img/animation/Car-one.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 251px;
+        height: 100px;
+        position: absolute;
+        top: 46%;
+        left: -4%;
+        animation: cars 6s linear forwards;
+        animation-iteration-count: infinite;
+        @media (max-width: $media-tablet) {
+            animation: cars-media-tablet 6s linear forwards;
+            animation-iteration-count: infinite;
+            transform: scale(0.549);
+            top: 43.5%;
+            left: -9%;
+        }
+        @media (max-width: $media-mobile) {
+            animation: cars-media-mobile 6s linear forwards;
+            animation-iteration-count: infinite;
+            transform: scale(0.25);
+            top: 50px;
+            left: -109px;
+        }
+    }
+    &__car-two {
+        background: url('../img/animation/Car-two.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 205px;
+        height: 97px;
+        position: absolute;
+        top: 45.5%;
+        left: 23.2%;
+        animation: cars 5s linear forwards;
+        animation-iteration-count: infinite;
+        @media (max-width: $media-tablet) {
+            animation: cars-media-tablet 5s linear forwards;
+            animation-iteration-count: infinite;
+            transform: scale(0.549);
+            top: 43.5%;
+            left: 19%;
+        }
+        @media (max-width: $media-mobile) {
+            animation: cars-media-mobile 6s linear forwards;
+            animation-iteration-count: infinite;
+            transform: scale(0.25);
+            top: 52px;
+            left: 7px;
+        }
+    }
+    &__car-three {
+        background: url('../img/animation/Car-three.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 247px;
+        height: 66px;
+        position: absolute;
+        top: 48.2%;
+        left: 44.8%;
+        z-index: 0;
+        animation: cars 5s linear forwards;
+        animation-iteration-count: infinite;
+        @media (max-width: $media-tablet) {
+            animation: cars-media-tablet 5s linear forwards;
+            animation-iteration-count: infinite;
+            transform: scale(0.549);
+            top: 50%;
+            left: 39%;
+        }
+        @media (max-width: $media-mobile) {
+            animation: cars-media-mobile 6s linear forwards;
+            animation-iteration-count: infinite;
+            transform: scale(0.25);
+            top: 68px;
+            left: 73px;
+        }
+    }
+    &__car-four {
+        background: url('../img/animation/Car-four.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 269px;
+        height: 127px;
+        position: absolute;
+        top: 43.5%;
+        right: -3%;
+        animation: cars 5s linear forwards;
+        animation-iteration-count: infinite;
+        @media (max-width: $media-tablet) {
+            animation: cars-media-tablet 5s linear forwards;
+            animation-iteration-count: infinite;
+            transform: scale(0.549);
+            top: 38%;
+            right: -11%;
+        }
+        @media (max-width: $media-mobile) {
+            animation: cars-media-mobile 6s linear forwards;
+            animation-iteration-count: infinite;
+            transform: scale(0.25);
+            top: 32px;
+            right: -30%;
+        }
+    }
+    &__lantern-left {
+        background: url('../img/animation/Lanterns.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 151px;
+        height: 396px;
+        position: absolute;
+        top: 5.5%;
+        left: 31%;
+        @media (max-width: $media-tablet) {
+            transform: scale(0.549);
+            top: -10%;
+            left: 28.5%;
+        }
+        @media (max-width: $media-mobile) {
+            transform: scale(0.25);
+            top: -67%;
+            left: -15.8%;
+        }
+    }
+    &__lantern-right {
+        background: url('../img/animation/Lanterns.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 151px;
+        height: 396px;
+        position: absolute;
+        top: 5.5%;
+        right: -4.1%;
+        @media (max-width: $media-tablet) {
+            transform: scale(0.549);
+            top: -10%;
+            right: -9%;
+        }
+        @media (max-width: $media-mobile) {
+            transform: scale(0.25);
+            top: -67%;
+            right: -18.7%;
+        }
+    }
+    &__lantern {
+        background: url('../img/animation/Lantern.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 215px;
+        height: 563px;
+        position: absolute;
+        top: 4%;
+        right: 11.3%;
+        @media (max-width: $media-tablet) {
+            transform: scale(0.549);
+            top: -19%;
+            right: 4%;
+        }
+        @media (max-width: $media-mobile) {
+            transform: scale(0.25);
+            top: -96%;
+            right: -8.3%;
+        }
+    }
+    &__taxi {
+        background: url('../img/animation/taxi.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 887px;
+        height: 267px;
+        position: absolute;
+        top: 42%;
+        right: -3%;
+        transform: translateX(200%);
+        animation: taxi 10s linear 6s;
+        animation-iteration-count: infinite;
+        @media (max-width: $media-tablet) {
+            animation: taxi-media-tablet 7s linear 5s;
+            transform: translateX(200%) scale(0.549);
+            top: 32.5%;
+            right: -29%;
+        }
+        @media (max-width: $media-mobile) {
+            animation: taxi-media-mobile 7s linear 5s;
+            transform: translateX(200%) scale(0.25);
+            top: -7%;
+            right: -91.5%;
+        }
+    }
+    &__message-taxi {
+        background: url('../img/animation/Message-taxi.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 169px;
+        height: 108px;
+        position: absolute;
+        top: 33%;
+        right: 26%;
+        opacity: 0;
+        animation: message-taxi 3s ease 10s;
+        @media (max-width: $media-tablet) {
+            animation: message-taxi 2s ease 8s;
+            transform: scale(0.549);
+            top: 34%;
+            right: 21%;
+        }
+        @media (max-width: $media-mobile) {
+            animation: message-taxi 2s ease 8s;
+            transform: scale(0.25);
+            top: 17%;
+            right: 10%;
+        }
+    }
+    &__woman {
+        background: url('../img/animation/woman.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 98px;
+        height: 268px;
+        position: absolute;
+        top: 50.5%;
+        left: 13%;
+        @media (max-width: $media-tablet) {
+            transform: scale(0.549);
+            top: 40%;
+            left: 12%;
+        }
+        @media (max-width: $media-mobile) {
+            transform: scale(0.25);
+            top: 2%;
+            left: 2%;
+        }
+    }
+    &__woman-arm {
+        background: url('../img/animation/woman-arm.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 64px;
+        height: 45px;
+        position: absolute;
+        top: 68.2%;
+        left: 15%; 
+        transform: rotate(0deg);
+        transform-origin: 9px top;
+        animation: woman-arm 2s ease 3s;
+        @media (max-width: $media-tablet) {
+            animation: woman-arm-media-tablet 2s ease 3s;
+            transform: scale(0.549);
+            top: 71%;
+            left: 15.5%;
+        }
+        @media (max-width: $media-mobile) {
+            animation: woman-arm-media-mobile 2s ease 3s;
+            transform: scale(0.25);
+            top: 73%;
+            left: 11.7%;
+        }
+    }
+    &__woman-message {
+        background: url('../img/animation/Messag-woman.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 169px;
+        height: 108px;
+        position: absolute;
+        top: 34%;
+        left: 6.5%;
+        opacity: 0;
+        animation: woman-message 3s ease 3s;
+        @media (max-width: $media-tablet) {
+            transform: scale(0.549);
+            top: 34%;
+            left: 3%;
+        }
+        @media (max-width: $media-mobile) {
+            transform: scale(0.25);
+            top: 20%;
+            left: -11.5%;
+        }
+    }
+    &__suitcases {
+        background: url('../img/animation/Suitcases.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 192px;
+        height: 96px;
+        position: absolute;
+        top: 78%;
+        left: 12.4%;
+        z-index: 3;
+        @media (max-width: $media-tablet) {
+            transform: scale(0.549);
+            top: 74.7%;
+            left: 8.5%;
+        }
+        @media (max-width: $media-mobile) {
+            transform: scale(0.25);
+            top: 61%;
+            left: -8%;
+        }
+    }
+    &__man {
+        background: url('../img/animation/man.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 10;
+        width: 205px;
+        height: 354px;
+        position: absolute;
+        top: 37%;
+        left: 20.5%;
+        @media (max-width: $media-tablet) {
+            transform: scale(0.549);
+            top: 22%;
+            left: 16.5%;
+        }
+        @media (max-width: $media-mobile) {
+            transform: scale(0.25);
+            top: -28%;
+            left: -1.4%;
+        }
+    }
+    &__man-arm {
+        background: url('../img/animation/man-arm.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 89px;
+        height: 129px;
+        position: absolute;
+        top: 31.5%;
+        left: 20.5%;
+        transform: translate(13px,-22px) rotate(150deg);
+        transform-origin: 0 bottom;
+        animation: man-arm 3s ease 9s forwards;
+        @media (max-width: $media-tablet) {
+            transform: scale(0.549) translate(8px,-22px) rotate(150deg);
+            animation: man-arm-media-tablet 2s ease 7s;
+            top: 21%;
+            left: 22.8%;
+        }
+        @media (max-width: $media-mobile) {
+            transform: scale(0.25)  translate(9px,-24px) rotate(150deg);
+            animation: man-arm-media-mobile 2s ease 7s;
+            top: -14.2%;
+            left: 19.3%;
+        }
+    }
+    &__man-message {
+        background: url('../img/animation/Message-man.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 168px;
+        height: 86px;
+        position: absolute;
+        top: 23.5%;
+        left: 19.5%;
+        opacity: 0;
+        animation: man-message 3s ease 9s;
+        @media (max-width: $media-tablet) {
+            animation: man-message 3s ease 7s;
+            transform: scale(0.549);
+            top: 26%;
+            left: 16.5%;
+        }
+        @media (max-width: $media-mobile) {
+            animation: man-message 3s ease 7s;
+            transform: scale(0.25);
+            top: 15%;
+            left: 1.5%;
+        }
+    }
+    &__man-message-two {
+        background: url('../img/animation/man-message-two.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 168px;
+        height: 86px;
+        position: absolute;
+        top: 22%;
+        left: 20%;
+        opacity: 0;
+        animation: man-message-two 3s ease 12s;
+        @media (max-width: $media-tablet) {
+            animation: man-message-two 2s ease 10s;
+            transform: scale(0.549);
+            top: 24%;
+            left: 16.5%;
+        }
+        @media (max-width: $media-mobile) {
+            animation: man-message-two 2s ease 10s;
+            transform: scale(0.25);
+            top: 15%;
+            left: 1.5%;
+        }
+    }   
 }
 
 .breadcrumbs__list {
     margin-top: 10px;
 }
 
-.animation__cloud {
-    position: relative;
-    width: 1400px;
-    height: 138px;
-    margin: 0 auto;
-    animation: cloud 30s linear forwards;
-    animation-iteration-count: infinite;
-    @media (max-width: $media-tablet) {
-        height: 80px;
-        width: 768px;
-    }
-    @media (max-width: $media-mobile) {
-        width: 375px;
-    }
-} 
-
 @keyframes cloud {
+    0% {
+        transform: translateX(-1400%);
+    }
     100% {
-        transform: translateX(100%);
+        transform: translateX(1400%);
     }
 }
 
-.animation__img {
-    @media (max-width: $media-tablet) {
-        transform: scale(0.549);
+@keyframes cloud-media-tablet {
+    0% {
+        transform: scale(0.549) translateX(-1200%);
     }
-    @media (max-width: $media-mobile) {
-        transform: scale(0.25);
-    }
-}
-
-.animation__cloud-one {
-    background-image: url('../img/animation/cloud-one.png');
-    background-repeat: no-repeat;
-    background-size: cover;    
-    width: 92px;
-    height: 27px;
-    position: absolute;
-    left: 5.8%;
-    top: 9%;
-    @media (max-width: $media-tablet) {
-        left: 3.7%;
-        top: 1%;
-    }
-    @media (max-width: $media-mobile) {
-       
+    100% {
+        transform: scale(0.549) translateX(1200%);
     }
 }
 
-.animation__cloud-two {
-    background-image: url('../img/animation/cloud-two.png');
-    background-repeat: no-repeat;
-    background-size: cover;    
-    width: 187px;
-    height: 40px;
-    position: absolute;
-    left: 25.3%;
-    top: 33%;
-    @media (max-width: $media-tablet) {
-        left: 20.5%;
-        top: 11%;
+@keyframes cloud-media-mobile {
+    0% {
+        transform: scale(0.25) translateX(-1600%);
     }
-    @media (max-width: $media-mobile) {
-       
+    100% {
+        transform: scale(0.25) translateX(1600%);
     }
 }
 
-.animation__cloud-three {
-    background-image: url('../img/animation/cloud-three.png');
-    background-repeat: no-repeat;
-    background-size: cover;    
-    width: 157px;
-    height: 33px;
-    position: absolute;
-    left: 43.7%;
-    top: 6%;
-    @media (max-width: $media-tablet) {
-        left: 40%;
-        top: 1%;
+@keyframes cars {
+    0% {
+        transform: translateX(-600%);
     }
-    @media (max-width: $media-mobile) {
-       
+    100% {
+        transform: translateX(600%);
     }
 }
 
-.animation__cloud-four {
-    background-image: url('../img/animation/cloud-four.png');
-    background-repeat: no-repeat;
-    background-size: cover;    
-    width: 202px;
-    height: 42px;
-    position: absolute;
-    left: 51.8%;
-    top: 66%;    
-    @media (max-width: $media-tablet) {
-        left: 46%;
-        top: 35%;
+@keyframes cars-media-tablet {
+    0% {
+        transform: scale(0.549) translateX(-600%);
     }
-    @media (max-width: $media-mobile) {
-       
+    100% {
+        transform: scale(0.549) translateX(600%);
     }
 }
 
-.animation__cloud-five {
-    background-image: url('../img/animation/cloud-five.png');
-    background-repeat: no-repeat;
-    background-size: cover;    
-    width: 93px;
-    height: 27px;
-    position: absolute;
-    right: 20.5%;
-    top: 32%;
-    @media (max-width: $media-tablet) {
-        right: 18%;
-        top: 11%;
+@keyframes cars-media-mobile {
+    0% {
+        transform: scale(0.25) translateX(-600%);
     }
-    @media (max-width: $media-mobile) {
-       
-    }
-}
-
-.animation__cloud-six {
-    background-image: url('../img/animation/cloud-six.png');
-    background-repeat: no-repeat;
-    background-size: cover;    
-    width: 165px;
-    height: 35px;
-    position: absolute;
-    top: 30%;
-    right: -1.6%;
-    @media (max-width: $media-tablet) {
-        right: -7%;
-        top: 9.5%;
-    }
-    @media (max-width: $media-mobile) {
-       
-    }
-}
-
-.animation__sun {
-    background-image: url('../img/animation/sun.png');
-    background-repeat: no-repeat;
-    background-size: cover;    
-    width: 59px;
-    height: 59px;
-    position: absolute;
-    top: 0;
-    right: 12.5%;
-    @media (max-width: $media-tablet) {
-        right: 11%;
-        top: -8%;
-    }
-    @media (max-width: $media-mobile) {
-       
-    }
-}
-
-.animation__town {
-    background-image: url('../img/animation/town.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    width: 74%;
-    height: 630px;
-    margin: 0 auto;
-    position: relative;
-    margin-bottom: 69px;
-    @media (max-width: $media-tablet) {
-        width: 100%;
-        background-size: 113% 100%;
-        height: 384px;
-    }
-    @media (max-width: $media-mobile) {
-        height: 182px;
-    }
-}
-
-.animation__cars {
-    animation: cars 20s linear;
-    animation-iteration-count: infinite;
-    @media (max-width: $media-tablet) {
-        animation: cars-media-tablet 20s linear;
-        transform: scale(0.549);
-    }
-}
-
-// @keyframes cars-media-tablet {
-//     100% {
-//         transform: scale(0.549) translateX(100%);
-//     }
-// }
-
-// @keyframes cars {
-//     100% {
-//         transform: translateX(100%);
-//     }
-// }
-
-.animation__car-one {
-    background: url('../img/animation/Car-one.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 251px;
-    height: 100px;
-    position: absolute;
-    top: 46%;
-    left: -4%;
-    @media (max-width: $media-tablet) {
-        transform: scale(0.549);
-        top: 47.3%;
-        left: -9%;
-    }
-    @media (max-width: $media-mobile) {
-        transform: scale(0.25);
-        top: 290px;
-        left: -56px;
-    }
-}
-
-.animation__car-two {
-    background: url('../img/animation/Car-two.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 205px;
-    height: 97px;
-    position: absolute;
-    top: 45.5%;
-    left: 23.2%;
-    @media (max-width: $media-tablet) {
-        transform: scale(0.549);
-        top: 47.3%;
-        left: 19%;
-    }
-    @media (max-width: $media-mobile) {
-        transform: scale(0.25);
-        top: 290px;
-        left: -56px;
-    }
-}
-
-.animation__car-three {
-    background: url('../img/animation/Car-three.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 247px;
-    height: 66px;
-    position: absolute;
-    top: 48.2%;
-    left: 44.8%;
-    @media (max-width: $media-tablet) {
-        transform: scale(0.549);
-        top: 51.5%;
-        left: 39%;
-    }
-    @media (max-width: $media-mobile) {
-        transform: scale(0.25);
-        top: 290px;
-        left: -56px;
-    }
-}
-
-.animation__car-four {
-    background: url('../img/animation/Car-four.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 269px;
-    height: 127px;
-    position: absolute;
-    top: 43.5%;
-    right: -3%;
-    @media (max-width: $media-tablet) {
-        transform: scale(0.549);
-        top: 42.5%;
-        right: -11%;
-    }
-    @media (max-width: $media-mobile) {
-        transform: scale(0.25);
-        top: 290px;
-        right: -3%;
-    }
-}
-
-.animation__lantern-left {
-    background: url('../img/animation/Lanterns.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 151px;
-    height: 396px;
-    position: absolute;
-    top: 5.5%;
-    left: 31%;
-    @media (max-width: $media-tablet) {
-        transform: scale(0.549);
-        top: -6%;
-        left: 28.5%;
-    }
-    @media (max-width: $media-mobile) {
-        transform: scale(0.25);
-        top: 290px;
-        right: -3%;
-    }
-}
-
-.animation__lantern-right {
-    background: url('../img/animation/Lanterns.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 151px;
-    height: 396px;
-    position: absolute;
-    top: 5.5%;
-    right: -4.1%;
-    @media (max-width: $media-tablet) {
-        transform: scale(0.549);
-        top: -6%;
-        right: -9%;
-    }
-    @media (max-width: $media-mobile) {
-        transform: scale(0.25);
-        top: 290px;
-        right: -3%;
-    }
-}
-
-.animation__taxi {
-    background: url('../img/animation/taxi.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 887px;
-    height: 267px;
-    position: absolute;
-    top: 42%;
-    right: -3%;
-    opacity: 0;
-    transform: translateX(0px);
-    animation: taxi 7s linear 5s;
-    @media (max-width: $media-tablet) {
-        animation: taxi-media-tablet 7s linear 5s;
-        transform: scale(0.549);
-        top: 32.5%;
-        right: -29%;
-    }
-    @media (max-width: $media-mobile) {
-        transform: scale(0.25);
-        top: 290px;
-        right: -3%;
+    100% {
+        transform: scale(0.25) translateX(600%);
     }
 }
 
 @keyframes taxi {
     0% {
-        opacity: 1;
-        transform: translateX(0px);
+        transform: translateX(200%);
+    }
+    35% {
+        transform: translateX(-40px);
     }
     50% {
-        opacity: 1;
         transform: translateX(-40px);
     }
     100% {
-        opacity: 1;
-        transform: translateX(-1400px);    
+        transform: translateX(-600%);    
     }
 }
 
 @keyframes taxi-media-tablet {
     0% {
-        opacity: 1;
-        transform: scale(0.549) translateX(0px);
+        transform: scale(0.549) translateX(200%);
+    }
+    35% {
+
+        transform: scale(0.549) translateX(-40px);
     }
     50% {
-        opacity: 1;
+
         transform: scale(0.549) translateX(-40px);
     }
     100% {
-        opacity: 1;
-        transform: scale(0.549) translateX(-1400px);    
+        transform: scale(0.549) translateX(-200%);    
     }
 }
 
-.animation__message-taxi {
-    background: url('../img/animation/Message-taxi.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 169px;
-    height: 108px;
-    position: absolute;
-    top: 33%;
-    right: 26%;
-    opacity: 0;
-    animation: message-taxi 2s ease 8s;
-    @media (max-width: $media-tablet) {
-        transform: scale(0.549);
-        top: 34%;
-        right: 21%;
+@keyframes taxi-media-mobile {
+    0% {
+        transform: scale(0.25) translateX(200%);
     }
-    @media (max-width: $media-mobile) {
-        transform: scale(0.25);
-        top: 290px;
-        right: -3%;
+    35% {
+
+        transform: scale(0.25) translateX(-40px);
+    }
+    50% {
+
+        transform: scale(0.25) translateX(-40px);
+    }
+    100% {
+        transform: scale(0.25) translateX(-200%);    
     }
 }
 
@@ -435,52 +756,6 @@
     }
     100% {
         opacity: 0;
-    }
-}
-
-.animation__woman {
-    background: url('../img/animation/woman.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 98px;
-    height: 268px;
-    position: absolute;
-    top: 50.5%;
-    left: 13%;
-    @media (max-width: $media-tablet) {
-        transform: scale(0.549);
-        top: 40%;
-        left: 12%;
-    }
-    @media (max-width: $media-mobile) {
-        transform: scale(0.25);
-        top: 290px;
-        right: -3%;
-    }
-}
-
-.animation__woman-arm {
-    background: url('../img/animation/woman-arm.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 64px;
-    height: 45px;
-    position: absolute;
-    top: 68.2%;
-    left: 15%; 
-    transform: rotate(0deg);
-    transform-origin: 9px top;
-    animation: woman-arm 2s ease 3s;
-    @media (max-width: $media-tablet) {
-        animation: woman-arm-media-tablet 2s ease 3s;
-        transform: scale(0.549);
-        top: 71%;
-        left: 15.5%;
-    }
-    @media (max-width: $media-mobile) {
-        transform: scale(0.25);
-        top: 290px;
-        right: -3%;
     }
 }
 
@@ -508,71 +783,27 @@
     }
 }
 
-.animation__woman-message {
-    background: url('../img/animation/Messag-woman.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 169px;
-    height: 108px;
-    position: absolute;
-    top: 34%;
-    left: 6.5%;
-    opacity: 0;
-    animation: woman-message 2s ease 3s;
-    @media (max-width: $media-tablet) {
-        transform: scale(0.549);
-        top: 34%;
-        left: 3%;
+@keyframes woman-arm-media-mobile {
+    0% {
+        transform: scale(0.25) rotate(0deg);
     }
-    @media (max-width: $media-mobile) {
-        transform: scale(0.25);
-        top: 290px;
-        right: -3%;
+    50% {
+        transform: scale(0.25) rotate(-45deg);
+    }
+    100% {
+        transform: scale(0.25) rotate(0deg);
     }
 }
 
-.animation__suitcases {
-    background: url('../img/animation/Suitcases.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 192px;
-    height: 96px;
-    position: absolute;
-    top: 78%;
-    left: 12.4%;
-    z-index: 3;
-    @media (max-width: $media-tablet) {
-        transform: scale(0.549);
-        top: 74.7%;
-        left: 8.5%;
+@keyframes woman-message {
+    0% {
+        opacity: 0;
     }
-    @media (max-width: $media-mobile) {
-        transform: scale(0.25);
-        top: 290px;
-        right: -3%;
+    50% {
+        opacity: 1;
     }
-}
-
-.animation__man-message {
-    background: url('../img/animation/Message-man.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 168px;
-    height: 86px;
-    position: absolute;
-    top: 23.5%;
-    left: 19.5%;
-    opacity: 0;
-    animation: man-message 2s ease 6s;
-    @media (max-width: $media-tablet) {
-        transform: scale(0.549);
-        top: 26%;
-        left: 16.5%;
-    }
-    @media (max-width: $media-mobile) {
-        transform: scale(0.25);
-        top: 290px;
-        right: -3%;
+    100% {
+        opacity: 0;
     }
 }
 
@@ -585,82 +816,12 @@
     }
 }
 
-.animation__man-message-two {
-    background: url('../img/animation/man-message-two.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 168px;
-    height: 86px;
-    position: absolute;
-    top: 22%;
-    left: 20%;
-    opacity: 0;
-    animation: man-message-two 2s ease 10s;
-    @media (max-width: $media-tablet) {
-        transform: scale(0.549);
-        top: 24%;
-        left: 16.5%;
-    }
-    @media (max-width: $media-mobile) {
-        transform: scale(0.25);
-        top: 290px;
-        right: -3%;
-    }
-}
-
 @keyframes man-message-two {
     0% {
         opacity: 1;
     }
     100% {
         opacity: 0;
-    }
-}
-
-.animation__man {
-    background: url('../img/animation/man.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 10;
-    width: 205px;
-    height: 354px;
-    position: absolute;
-    top: 37%;
-    left: 20.5%;
-    @media (max-width: $media-tablet) {
-        transform: scale(0.549);
-        top: 22%;
-        left: 16.5%;
-    }
-    @media (max-width: $media-mobile) {
-        transform: scale(0.25);
-        top: 290px;
-        right: -3%;
-    }
-}
-
-.animation__man-arm {
-    background: url('../img/animation/man-arm.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 89px;
-    height: 129px;
-    position: absolute;
-    top: 31.5%;
-    left: 20.5%;
-    transform: translate(13px,-22px) rotate(150deg);
-    transform-origin: 0 bottom;
-    animation: man-arm 2s ease 6s;
-    @media (max-width: $media-tablet) {
-        transform: scale(0.549) translate(8px,-22px) rotate(150deg);
-        animation: man-arm-media-tablet 2s ease 6s;
-        top: 21%;
-        left: 22.8%;
-    }
-    @media (max-width: $media-mobile) {
-        transform: scale(0.25);
-        top: 290px;
-        right: -3%;
     }
 }
 
@@ -690,35 +851,15 @@
     }
 }
 
-.animation__lantern {
-    background: url('../img/animation/Lantern.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 215px;
-    height: 563px;
-    position: absolute;
-    top: 4%;
-    right: 11.3%;
-    @media (max-width: $media-tablet) {
-        transform: scale(0.549);
-        top: -6%;
-        right: -9%;
-    }
-    @media (max-width: $media-mobile) {
-        transform: scale(0.25);
-        top: 290px;
-        right: -3%;
-    }
-}
-
-@keyframes woman-message {
+@keyframes man-arm-media-mobile {
     0% {
-        opacity: 0;
+        transform: scale(0.25) translate(9px,-24px) rotate(150deg);
     }
     50% {
-        opacity: 1;
+        transform: scale(0.25) rotate(0deg);
     }
     100% {
-        opacity: 0;
+        transform: scale(0.25) translate(9px,-24px) rotate(150deg);
+        
     }
 }

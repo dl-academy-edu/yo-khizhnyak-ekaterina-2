@@ -1,10 +1,12 @@
-.header__change:hover {
-    opacity: 0.5;
-}
-  
-.header__change:active {
-    opacity: 0.2;
-}
+.header__change {
+    transition: 0.4s;
+    &:hover {
+      opacity: 0.5;
+    }
+    &:active {
+      opacity: 0.2;
+    }
+  }
 
 .header__list-link {
     font-family: 'Open Sans', sans-serif;

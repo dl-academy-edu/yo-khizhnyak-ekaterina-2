@@ -6,9 +6,9 @@
     <meta name="google" content="notranslate">
     <meta name="format-detection" content="telephone=no">
 
-    <title>DL Academy</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <title>Design Life Kids: a training project was created based on the layouts from Figma</title>
+    <meta name="description" content="Modern finds for the modern home. Curated goods by unique designers around the world from fashion to furniture for kids and adults">
+    <meta name="keywords" content="HTML CSS JS GULP SVG Animation Grid Flexbox">
 
     <script>
       var docElement = document.documentElement;
@@ -100,6 +100,8 @@
           media="(max-width: 375px)">
           <source srcset="./img/woman-tablet.jpg , ./img/woman-tablet-2x.jpg 2x" width="258" height="512" 
           media="(max-width: 768px)">
+          <source srcset="./img/woman-2x.jpg 2x" 
+          media="(min-width: 769px)">
           <img class="delivery__photo" src="./img/womanInDress.jpg" alt="woman" width="480" height="559">
         </picture>        
         <div class="delivery__block">
@@ -125,25 +127,21 @@
               "link": "https://mail.ru/",
               "img": "/img/mail.ru.png",
               "alt": "mail"
-         
             })
             @@include('blocks/socialnetwork.html', {
               "link": "https://apple.com",
               "img": "/img/apple.png",
               "alt": "apple"
-           
             })
             @@include('blocks/socialnetwork.html', {
               "link": "https://eltexcm.ru",
               "img": "/img/eltex.png",
               "alt": "eltex"
-            
             })
             @@include('blocks/socialnetwork.html', {
               "link": "https://owox.com",
               "img": "/img/owox.png",
               "alt": "owox"
-             
             })
           </ul>
       </section>
@@ -168,6 +166,7 @@
     @@include('blocks/footer.html')
     @@include('blocks/popup.html')
     <script src="js/app.js" defer></script>
-    <script src="js/popup.js"></script>        
+    <script src="js/popup.js"></script>
+    <script src="js/burger.js"></script>          
   </body>
 </html>

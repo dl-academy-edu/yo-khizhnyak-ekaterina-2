@@ -1,8 +1,6 @@
 .contact {
     &__title {
-        font-family: 'Montserrat', sans-serif;
-        font-style: normal;
-        font-weight: 700;
+        @include montserrat-bold;
         font-size: 40px;
         line-height: 49px;
         text-transform: uppercase;
@@ -20,6 +18,11 @@
             line-height: 29px;
             margin-top: 46px;
         }
+    }
+    &__title-hidden {
+        visibility: hidden;
+        max-width: 0;
+        max-height: 0;
     }
     &__wrapper {
         display: flex;
@@ -61,9 +64,7 @@
         max-height: 0;
     }
     &__text {
-        font-family: 'Open Sans', sans-serif;
-        font-style: normal;
-        font-weight: 400;
+        @include open-sans-400;
         font-size: 16px;
         line-height: 22px;
         color: #1E0606;
@@ -75,9 +76,7 @@
         }
     }
     &__info-text {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 600;
+        @include montserrat-SemiBold;
         font-size: 26px;
         line-height: 34px;
         text-transform: uppercase;
